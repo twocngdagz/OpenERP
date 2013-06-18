@@ -1,0 +1,4 @@
+from osv import import osv, fields
+
+class ph_payroll(osv.osv):
+    _name = 'ph.payroll'

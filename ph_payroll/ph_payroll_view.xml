@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+	<menuitem id="menu_ph_payroll_configuration" name="Payroll System" sequence="5" groups="group_payroll_admin,group_payroll_manager,group_payroll_user"/>
+	<!-- Schedule View -->
+		<record id="view_schedule_calendar" model="ir.ui.view">
+	        <field name="name">ph.payroll.schedule.calendar</field>
+	        <field name="model">ph.payroll.schedule</field>
+	        <field name="type">calendar</field>
+	        <field name="arch" type="xml">
+	            <calendar string="Schedule" color="employee_ids" date_start="date_from" date_stop="date_to" mode="month">
+	                <field name="name"/>
+	            </calendar>
+	        </field>
+	    </record>
+	    
+	    <record id="view_schedule_form" model="ir.ui.view">
+	    	<field name="name">ph.payroll.schedule.form</field>
+	    	<field name="model">ph.payroll.schedule</field>
+	    	<field name="type">form</field>
+	    	<field name="priority">1</field>
+	    	<field name="arch" type="xml">
+	    		<form string="Schedule">
+	    			<field name="name"/>
+	    			<field name="date_from"/>
+	    			<field name="notes"/>
+	    			<field name="date_to"/>
+	    			<field name="state"/>
+	    			<field name="lunch"/>
+	    		</form>
+	    	</field>
+	    </record>
+	    
+	    
+	    <record id="action_schedule" model="ir.actions.act_window">
+	    	<field name="name">Schedule</field>
+	    	<field name="res_model">ph.payroll.schedule</field>
+	    	<field name="view_type">form</field>
+	    	<field name="view_id" ref="view_schedule_calendar"/>
+	    </record>
+	    
+	    <record model="ir.actions.act_window.view" id="action_schedule_calendar">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="view_schedule_calendar"/>
+            <field name="act_window_id" ref="action_schedule"/>
+        </record>
+	    
+	    <menuitem id="menu_ph_payroll_schdule" action="action_schedule" parent="menu_ph_payroll_configuration" sequence="5"/>
+    <!-- End Schedule View -->
+	    
+	    
+    <!-- Calendar View -->
+	    <record id="view_calendar_form" model="ir.ui.view">
+	    	<field name="name">ph.payroll.calendar.form</field>
+	    	<field name="model">ph.payroll.calendar</field>
+	    	<field name="type">form</field>
+	    	<field name="arch" type="xml">
+	    		<form string="Calendar">
+	    			<field name="name"/>
+	    			<field name="year"/>
+	    			<notebook colspan="4">
+	    				<page string="Schedules">
+	    					<field name="schedule_ids" colspan="4" nolabel="1" widget="many2many" mode="tree,form"/>
+	    				</page>
+	    			</notebook>
+	    		</form>
+	    	</field>
+	    </record>
+	    
+	    <record id="view_calendar_tree" model="ir.ui.view">
+	    	<field name="name">ph.payroll.calendar.tree</field>
+	    	<field name="model">ph.payroll.calendar</field>
+	    	<field name="type">tree</field>
+	    	<field name="arch" type="xml">
+	    		<tree string="Calendar List">
+	    			<field name="name"/>
+	    			<field name="year"/>
+	    		</tree>
+	    	</field>
+	    </record>
+	    
+	    <record id="action_calendar" model="ir.actions.act_window">
+	    	<field name="name">Calendar</field>
+	    	<field name="res_model">ph.payroll.calendar</field>
+	    	<field name="view_type">form</field>
+	    	<field name="view_mode">tree,form</field>
+	    </record>
+	    
+	    <menuitem id="menu_ph_payroll_calendar" action="action_calendar" parent="menu_ph_payroll_configuration" sequence="6"/>
+	    
+    <!-- End Calendar View -->
+    
+    
+    <!-- SSS Table -->
+	    
+	    <record id="view_sss_form" model="ir.ui.view">
+	    	<field name="name">ph.payroll.sss.form</field>
+	    	<field name="model">ph.payroll.sss</field>
+	    	<field name="type">form</field>
+	    	<field name="arch" type="xml">
+	    		<form>
+	    			<field name="sss_from" digits="(12,2)"/>
+	    			<field name="sss_to" digits="(12,2)"/>
+	    			<field name="salary_credit" digits="(12,2)"/>
+	    			<field name="sss_er" digits="(12,2)"/>
+	    			<field name="sss_ee" digits="(12,2)"/>
+	    			<field name="sss_total" digits="(12,2)"/>
+	    			<field name="ec_er" digits="(12,2)"/>
+	    			<field name="total_er" digits="(12,2)"/>
+	    			<field name="total_ee" digits="(12,2)"/>
+	    			<field name="total_total" digits="(12,2)"/>
+	    			<field name="total_contribution" digits="(12,2)"/>
+	    		</form>
+	    	</field>
+	    </record>
+	    
+	    <record id="view_sss_tree" model="ir.ui.view">
+	    	<field name="name">ph.payroll.sss.tree</field>
+	    	<field name="model">ph.payroll.sss</field>
+	    	<field name="type">tree</field>
+	    	<field name="arch" type="xml">
+	    		<tree editable="top">
+	    			<field name="sss_from"/>
+	    			<field name="sss_to"/>
+	    			<field name="salary_credit"/>
+	    			<field name="sss_er"/>
+	    			<field name="sss_ee"/>
+	    			<field name="sss_total"/>
+	    			<field name="ec_er"/>
+	    			<field name="total_er"/>
+	    			<field name="total_ee"/>
+	    			<field name="total_total"/>
+	    			<field name="total_contribution"/>
+	    		</tree>
+	    	</field>
+	    </record>
+	    
+	    <record id="action_sss" model="ir.actions.act_window">
+	    	<field name="name">SSS Table</field>
+	    	<field name="res_model">ph.payroll.sss</field>
+	    	<field name="view_type">form</field>
+	    	<field name="view_mode">tree,form</field>
+	    </record>
+	    <menuitem id="menu_ph_payroll_sss" action="action_sss" parent="menu_ph_payroll_configuration" sequence="7"/>
+	    
+    <!-- SSS Table End -->
+    
+    
+    <!-- Philhealth Table -->
+    
+    	 <record id="view_philhealth_form" model="ir.ui.view">
+	    	<field name="name">ph.payroll.philhealth.form</field>
+	    	<field name="model">ph.payroll.philhealth</field>
+	    	<field name="type">form</field>
+	    	<field name="arch" type="xml">
+	    		<form>
+	    			<field name="philhealth_from" digits="(12,2)"/>
+	    			<field name="philhealth_to" digits="(12,2)"/>
+	    			<field name="salary_base" digits="(12,2)"/>
+	    			<field name="employee" digits="(12,2)"/>
+	    			<field name="employer" digits="(12,2)"/>
+	    			<field name="total" digits="(12,2)"/>
+	    		</form>
+	    	</field>
+	    </record>
+	    
+	    <record id="view_philhealth_tree" model="ir.ui.view">
+	    	<field name="name">ph.payroll.philhealth.tree</field>
+	    	<field name="model">ph.payroll.philhealth</field>
+	    	<field name="type">tree</field>
+	    	<field name="arch" type="xml">
+	    		<tree editable="top">
+	    			<field name="philhealth_from"/>
+	    			<field name="philhealth_to"/>
+	    			<field name="salary_base"/>
+	    			<field name="employee"/>
+	    			<field name="employer"/>
+	    			<field name="total"/>
+	    		</tree>
+	    	</field>
+	    </record>
+	    
+	    <record id="action_philhealth" model="ir.actions.act_window">
+	    	<field name="name">Philhealth Table</field>
+	    	<field name="res_model">ph.payroll.philhealth</field>
+	    	<field name="view_type">form</field>
+	    	<field name="view_mode">tree,form</field>
+	    </record>
+	    
+	    <menuitem id="menu_ph_payroll_philhealth" action="action_philhealth" parent="menu_ph_payroll_configuration" sequence="8"/>
+	
+	<!-- Philhealth Table End -->    
+		
+		
+	
+	<!-- Withh -->
+	
+		<record id="view_withholding_form" model="ir.ui.view">
+			<field name="name">ph.payroll.withholding.form</field>
+			<field name="model">ph.payroll.withholding</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Exemption">
+					<field name="name"/>
+					<field name="deduction_type"/>
+					<field name="exemption"/>
+					<field name="count"/>
+					<notebook colspan="4">
+						<page string="Bracket">
+	                        <field name="withholding_line_ids" colspan="4" nolabel="1" widget="many2many" mode="tree,form"/>
+	                    </page>
+					</notebook>
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_withholding_tree" model="ir.ui.view">
+			<field name="name">ph.payroll.withholing.tree</field>
+			<field name="model">ph.payroll.withholding</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Exemption List">
+					<field name="name"/>
+					<field name="deduction_type"/>
+				</tree>
+			</field>
+		</record>
+		
+		
+		<record id="view_withholding_filter" model="ir.ui.view">
+            <field name="name">Withholding</field>
+            <field name="model">ph.payroll.withholding</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+				<search string="Withholding">
+					<filter icon="terp-check" string="Daily" domain="[('deduction_type','=','daily')]"/>
+					<filter icon="terp-check" string="Weekly" domain="[('deduction_type','=','weekly')]"/>
+					<filter icon="terp-check" string="Semi-Monthly" domain="[('deduction_type','=','semi')]"/>
+					<filter icon="terp-check" string="Monthly" domain="[('deduction_type','=','monthly')]"/>
+					<field name="name"/>
+				</search>
+			</field>
+		</record>
+		
+		
+		<record id="withholding_action" model="ir.actions.act_window">
+			<field name="name">Withholding Tax Table</field>
+			<field name="res_model">ph.payroll.withholding</field>
+			<field name="mode">tree,form</field>
+			<field name="view_type">form</field>
+			<field name="search_view_id" ref="view_withholding_filter"/>
+		</record>
+	
+		<menuitem id="menu_withholding" action="withholding_action" parent="menu_ph_payroll_configuration" sequence="9"/>
+		
+		<record id="view_withholding_line_tree" model="ir.ui.view">
+			<field name="name">ph.payroll.withholding_line.tree</field>
+			<field name="model">ph.payroll.withholding.line</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="bracket"/>
+					<field name="percent_over"/>
+					<field name="base_tax"/>
+				</tree>
+			</field>
+		</record>
+	
+	<!-- End Withholding Tax -->
+	
+	
+	
+	<!-- Holiday -->
+	
+		<record id="view_holiday_tree" model="ir.ui.view">
+			<field name="name">ph.payroll.holiday.tree</field>
+			<field name="model">ph.payroll.holiday</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Holiday List" editable="top" colors="blue:type=='special';red:type=='legal'">
+					<field name="name"/>
+					<field name="day"/>
+					<field name="type"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="holiday_action" model="ir.actions.act_window">
+			<field name="name">Holidays</field>
+			<field name="res_model">ph.payroll.holiday</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem id="menu_holiday" parent="menu_ph_payroll_configuration" action="holiday_action" sequence="10"/>
+	
+	<!-- Holiday End -->
+	
+		<record id="view_payroll_sheet_form" model="ir.ui.view">
+			<field name="name">ph.payroll.sheet.form</field>
+			<field name="model">ph.payroll.sheet</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Payroll Sheet">
+					<field name="name"/>
+					<field name="date_start"/>
+					<field name="date_end"/>
+					<field name="type"/>
+					<notebook colspan="4">
+						<page string="Employee">
+							<field name="sheet_line_ids" colspan="4" nolabel="1" widget="many2many" mode="tree,form"/>
+						</page>
+					</notebook>
+					<field name="state"/>
+					<button name="compute_sheet" states="confirm" string="Compute Sheet" icon="gtk-execute" type="object"/>
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_payroll_sheet_tree" model="ir.ui.view">
+			<field name="name">ph.payroll.sheet.tree</field>
+			<field name="model">ph.payroll.sheet</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Payroll Sheet List">
+					<field name="name"/>
+					<field name="date_start"/>
+					<field name="date_end"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_payroll_sheet_line_form" model="ir.ui.view">
+			<field name="name">ph.payroll.sheet.line.form</field>
+			<field name="model">ph.payroll.sheet.line</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Payroll Sheet Line">
+					<field name="employee_id" on_change="onchange_employee_id(employee_id)"/>
+					<field name="basic" digits="(12,2)"/>
+					<field name="paysheet_id" />
+					<field name="cola" digits="(12,2)"/>
+					<field name="date"/>
+					<notebook colspan="4">
+						<page string="Regular Pay">
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Regular Pay"/>
+								<group col="4" colspan="2">
+									<field name="regular_hour" widget="float_time"/>
+									<field name="reg_day"/>
+								</group>
+								<field name="reg_pay" digits="(12,2)"/>
+								<field name="leave_pay" />
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Rates"/>
+								<field name="daily_rate" digits="(12,2)"/>
+								<field name="hour_rate" digits="(12,2)"/>
+								<field name="minute_rate" digits="(12,2)"/>
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Overtime Pay"/>
+								<field name="ot_hour" widget="float_time"/>
+								<field name="ot_pay" digits="(12,2)"/>
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Night Differentials"/>
+								<field name="nd_hour" widget="float_time"/>
+								<field name="nd_pay" digits="(12,2)"/>
+							</group>
+						</page>
+						<page string="Rest Day Pay">
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Rest Day Pay"/>
+								<field name="rest_hour" widget="float_time"/>
+								<field name="rest_pay" digits="(12,2)"/>
+								<separator colspan="2" string="Rest Day OT Pay"/>
+								<field name="rest_ot_hour" widget="float_time"/>
+								<field name="rest_ot_pay" digits="(12,2)" />
+								<separator colspan="2" string="Rest Day ND Pay"/>
+								<field name="rest_nd_hour" widget="float_time"/>
+								<field name="rest_nd_pay" digits="(12,2)"/>
+							</group>
+						</page>
+						<page string="Special Holiday Pay">
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Special Holiday Pay"/>
+								<field name="special_holiday_hour" widget="float_time"/>
+								<field name="special_holiday_pay" digits="(12,2)"/>
+								<separator colspan="2" string="Special Holiday OT Pay"/>
+								<field name="special_ot_hour" widget="float_time"/>
+								<field name="special_ot_pay" digits="(12,2)"/>
+								<separator colspan="2" string="Special Holiday ND Pay"/>
+								<field name="special_nd_hour" widget="float_time"/>
+								<field name="special_nd_pay" digits="(12,2)"/>
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Special/Rest Day Pay"/>
+								<field name="rest_special_hour" widget="float_time"/>
+								<field name="rest_special_pay" digits="(12,2)"/>
+								<separator colspan="2" string="Special/Rest Day OT Pay"/>
+								<field name="rest_special_ot_hour" widget="float_time"/>
+								<field name="rest_special_ot_pay" digits="(12,2)"/>
+								<separator colspan="2" string="Special/Rest Day ND Pay"/>
+								<field name="rest_special_nd_hour" widget="float_time"/>
+								<field name="rest_special_nd_pay" digits="(12,2)"/>
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Special Holiday ND OT Pay"/>
+								<field name="special_nd_ot_hour" widget="float_time"/>
+								<field name="special_nd_ot_pay" digits="(12,2)"/>								
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Special/Rest Day ND OT Pay"/>
+								<field name="rest_special_ot_nd_hour" widget="float_time"/>
+								<field name="rest_special_ot_nd_pay" digits="(12,2)"/>								
+							</group>
+						</page>
+						<page string="Legal Holiday Pay">
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Legal Holiday Pay"/>
+								<field name="legal_holiday_hour" widget="float_time"/>
+								<field name="legal_holiday_pay" digits="(12,2)"/>
+								<separator colspan="2" string="Legal Holiday OT Pay"/>
+								<field name="legal_ot_hour" widget="float_time"/>
+								<field name="legal_ot_pay" digits="(12,2)"/>
+								<separator colspan="2" string="Legal Holiday ND Pay"/>
+								<field name="legal_nd_hour" widget="float_time"/>
+								<field name="legal_nd_pay" digits="(12,2)"/>
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Legal/Rest Day Pay"/>
+								<field name="rest_legal_hour" widget="float_time"/>
+								<field name="rest_legal_pay" digits="(12,2)"/>
+								<separator colspan="2" string="Legal/Rest Day OT Pay"/>
+								<field name="rest_legal_ot_hour" widget="float_time"/>
+								<field name="rest_legal_ot_pay" digits="(12,2)"/>
+								<separator colspan="2" string="Legal/Rest Day ND Pay"/>
+								<field name="rest_legal_nd_hour" widget="float_time"/>
+								<field name="rest_legal_nd_pay" digits="(12,2)"/>
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Legal Holiday ND OT Pay"/>
+								<field name="legal_nd_ot_hour" widget="float_time"/>
+								<field name="legal_nd_ot_pay" digits="(12,2)"/>								
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Legal/Rest Day OT ND Pay"/>
+								<field name="rest_legal_ot_nd_hour" widget="float_time"/>
+								<field name="rest_legal_ot_nd_pay" digits="(12,2)"/>								
+							</group>
+						</page>
+						<page string="Allowances">
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Allowances"/>
+								<field name="meal_allow" digits="(12,2)"/>
+								<field name="cloth_allow" digits="(12,2)"/>
+								<field name="travel_allow" digits="(12,2)"/>
+								<field name="other_allow"  digits="(12,2)"/>
+							</group>
+						</page>
+						<page string="Deductions">
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Deductions"/>
+								<field name="include_deduction"/>
+								<field name="sss_loan" digits="(12,2)"/>
+								<field name="pagibig_loan" digits="(12,2)"/>
+								<field name="ca_loan" digits="(12,2)"/>
+								<field name="tax" digits="(12,2)"/>
+							</group>
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Other Deductions"/>
+								<field name="include_other_deduction"/>
+								<field name="tardy" widget="float_time"/>
+								<field name="tardy_deduct" digits="(12,2)"/>
+								<field name="leave_nopay"/>
+								<field name="undertime" widget="float_time"/>
+								<field name="undertime_deduct" digits="(12,2)"/>
+							</group>
+						</page>
+						<page string="Contributions">
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Contributions"/>
+								<field name="include_contribution"/>
+								<group col="4" colspan="2">
+									<field name="pag_ibig_contribution" digits="(12,2)"/>
+									<field name="pag_ibig_contribution_er" digits="(12,2)"/>
+									<field name="sss_contribution" digits="(12,2)"/>
+									<field name="sss_contribution_er" digits="(12,2)"/>
+									<field name="philhealth" digits="(12,2)"/>
+									<field name="philhealth_er" digits="(12,2)"/>
+								</group>
+								<field name="other_contribution" digits="(12,2)"/>
+							</group>
+						</page>
+						<page string="Income">
+							<group col="2" colspan="2">
+								<separator colspan="2" string="Total Income"/>
+								<field name="gross_income" digits="(12,2)"/>
+								<field name="taxable_income" digits="(12,2)"/>
+								<field name="total_deduction" digits="(12,2)"/>
+								<field name="net_pay" digits="(12,2)"/>
+							</group>
+						</page>
+					</notebook>
+					<field name="state" widget="statusbar" statusbar_visible="draft, confirm, approved"/>
+					<group>
+						<button name="compute_sheet" string="Compute Sheet" states="draft" icon="gtk-execute" type="object"/>
+						<button name="payroll_approved" string="Approved" states="confirm" type="object" icon="terp-camera_test"/>
+						<button name="payroll_confirm" string="Confirm" states="draft" type="object" icon="terp-camera_test"/>
+						<button name="payroll_draft" string="Draft" states="confirm, approved" type="object" icon="gtk-cancel"/>
+					</group>
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_payroll_sheet_line_tree" model="ir.ui.view">
+			<field name="name">ph.payroll.sheet.line.tree</field>
+			<field name="model">ph.payroll.sheet.line</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Payroll Sheet Line">
+					<field name="employee_id" on_change="onchange_employee_id()"/>
+					<field name="display_basic" sum="Total display_basic"/>
+					<field name="regular_hour" widget="float_time" string="Reg Hr"/>
+					<field name="reg_pay" digits="(12,2)" string="Reg Pay"/>
+					<field name="ot_hour" widget="float_time" string="OT Hr"/>
+					<field name="display_ot_pay" sum="Total display_ot_pay"/>
+					<field name="nd_hour" widget="float_time" string="ND Hr"/>
+					<field name="nd_pay" digits="(12,2)" string="ND Pay"/>
+					<field name="special_holiday_hour" widget="float_time" string="SH Hr"/>
+					<field name="special_holiday_pay" digits="(12,2)" string="SH Pay"/>
+					<field name="legal_holiday_hour" widget="float_time" string="LH HR"/>
+					<field name="legal_holiday_pay" digits="(12,2)" string="LH Pay"/>
+					<field name="sss_contrib" sum="Total sss_contrib"/>
+					<field name="philhealth_contrib" sum="Total philhealth_contrib"/>
+					<field name="pagibig_contrib" sum="Total pagibig_contrib"/>
+					<field name="gross" sum="Total gross"/>
+					<field name="taxable_income" digits="(12,2)"/>
+					<field name="total_deduction" digits="(12,2)"/>
+					<field name="display_net_pay" sum="Total display_net_pay"/>
+				</tree>
+			</field>
+		</record>
+		
+		
+		<record id="view_payroll_sheet_line_filter" model="ir.ui.view">
+            <field name="name">Job</field>
+            <field name="model">ph.payroll.sheet.line</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+				<search string="Payroll Sheet Line">
+					<filter name="draft" icon="terp-check" string="Draft" domain="[('state', '=','draft')]"/>
+					<filter name="confirm" icon="terp-check" string="Confirmed" domain="[('state','=','confirm')]"/>
+					<filter name="approved" icon="terp-check" string="Approved" domain="[('state','=','approved')]"/>
+					<field name="employee_id" widget="selection"/>
+					<field name="department_id" widget="selection"/>
+					<field name="company_id" widget="selection"/>
+					<field name="paysheet_id" widget="selection"/>
+				</search>
+			</field>
+		</record>
+		
+		<record id="action_payroll_sheet" model="ir.actions.act_window">
+			<field name="name">Payroll Sheet Entries</field>
+			<field name="res_model">ph.payroll.sheet</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<record id="action_payroll_sheet_line" model="ir.actions.act_window">
+			<field name="name">Payroll Sheet Items</field>
+			<field name="res_model">ph.payroll.sheet.line</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{'search_default_confirm':1}</field>
+			<field name="search_view_id" ref="view_payroll_sheet_line_filter"/>
+		</record>
+		<menuitem id="menu_view_payroll_sheet" action="action_payroll_sheet" parent="menu_ph_payroll_configuration" sequence="13"/>
+		<menuitem id="menu_view_payroll_sheet_line" action="action_payroll_sheet_line" parent="menu_ph_payroll_configuration" sequence="12"/>
+		
+		
+		<record id="view_compensation_form" model="ir.ui.view">
+			<field name="name">ph.human.resource.inherit</field>
+			<field name="model">ph.human.resource</field>
+			<field name="inherit_id" ref="ph_human_resource.view_ph_human_resource_form"/>
+			<field name="arch" type="xml">
+				<field name="contract_id" position="after">
+					<field name="calendar_id"/>
+					<field name="allow_ot"/>
+					<field name="allow_nd"/>
+				</field>
+				<notebook position="inside">
+					<page string="Compensation">
+						<group col="2" colspan="2">
+                             <separator colspan="2" string="Compensation"/>
+                             <group col="4" colspan="2">
+                             	<field name="mwe"/>
+                             	<field name="basic"/>
+                             </group>
+                             <field name="exemption_status" attrs="{'invisible':[('mwe','=',1)]}"/>
+                             <field name="cola" />
+                             <field name="employee_type" />
+                         </group>
+                         <group col="2" colspan="2">
+                             <separator colspan="2" string="Allowances"/>
+                             <field name="meal_allowance"/>
+                             <field name="cloth_allowance" />
+                             <field name="travel_allowance" />
+                             <field name="other_allowance" />
+                         </group>
+                         <group col="2" colspan="2">
+                             <separator colspan="2" string="Loans"/>
+                             <field name="sss_loan"/>
+                             <field name="pagibig_loan" />
+                             <field name="cash_advance" />
+                             <field name="other_loan" />
+                         </group>
+                         <group col="2" colspan="2">
+                             <separator colspan="2" string="Contributions"/>
+                             <group col="4" colspan="2">
+                      			 <field name="sss_contrib"/>
+                      			 <field name="sss_contrib_er"/>
+	                             <field name="pagibig_contrib" />
+	                             <field name="pagibig_contrib_er" />
+	                             <field name="philhealth_contrib" />
+	                             <field name="philhealth_contrib_er" />
+                             </group>
+                             <field name="other_contrib" />
+                         </group>
+					</page>
+				</notebook>
+			</field>
+		</record>
+		
+		
+		<record id="view_constant_form" model="ir.ui.view">
+			<field name="name">ph.payroll.constant.form</field>
+			<field name="model">ph.payroll.constant</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Payroll Constant">
+					<field name="ot_percent" />
+					<field name="nd_percent" />
+					<field name="legal_percent" />
+					<field name="special_percent" />
+					<field name="rest_percent" />
+					<field name="rest_legal_percent" />
+					<field name="rest_special_percent" />
+					<field name="rest_nd_percent" />
+					<field name="special_nd_percent" />
+					<field name="special_rest_nd_percent" />
+					<field name="legal_nd_percent" />
+					<field name="legal_rest_nd_percent" />
+					<field name="rest_ot_percent" />
+					<field name="special_ot_percent" />
+					<field name="special_rest_ot_percent" />
+					<field name="legal_ot_percent" />
+					<field name="legal_rest_ot_percent" />
+					<field name="nd_ot" />
+					<field name="rest_nd_ot" />
+					<field name="special_nd_ot" />
+					<field name="special_rest_nd_ot" />
+					<field name="legal_nd_ot" />
+					<field name="legal_rest_nd_ot" />
+				</form>
+			</field>
+		</record>
+		
+		
+		<record id="action_constant" model="ir.actions.act_window">
+			<field name="name">Payroll Constants</field>
+			<field name="res_model">ph.payroll.constant</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem id="menu_view_payroll_constant" action="action_constant" parent="menu_ph_payroll_configuration" sequence="13"/>
+		
+		
+		
+		
+		
+		<record id="view_attendance_tree" model="ir.ui.view">
+			<field name="name">ph.payroll.attendance.tree</field>
+			<field name="model">ph.payroll.attendance</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Attendance List" editable="top">
+					<field name="employee_id"/>
+					<field name="in_"/>
+					<field name="out"/>
+					<field name="hours_worked" widget="float_time"/>
+					<field name="late_hour" widget="float_time"/>
+					<field name="under_hour" widget="float_time"/>
+					<field name="ot_hour" widget="float_time"/>
+					<field name="nd_hour" widget="float_time"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="view_attendance_filter" model="ir.ui.view">
+            <field name="name">Attendance</field>
+            <field name="model">ph.payroll.attendance</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Attendance">
+                	<field name="in_" string="Date From" filter_domain="[('in_','&gt;',self)]"/>
+					<field name="in_" string="Date To" filter_domain="[('in_','&lt;',self)]"/>
+					<field name="company_id" string="Company" widget="selection"/>
+					<field name="department_id" string="Department" widget="selection"/>
+                </search>
+             </field>
+         </record>
+		
+		<record id="attendance_action" model="ir.actions.act_window">
+			<field name="name">Attendance</field>
+			<field name="res_model">ph.payroll.attendance</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="search_view_id" ref="view_attendance_filter"/>
+		</record>
+		
+		<menuitem id="menu_attendance" parent="menu_ph_payroll_configuration" action="attendance_action" sequence="11"/>
+	</data>
+</openerp>

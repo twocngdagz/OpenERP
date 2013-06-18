@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data noupdate="0">
+		<record model="res.groups" id="group_hr_admin">
+	        <field name="name">HR Administrator</field>
+	    </record>
+		<record model="res.groups" id="group_hr_manager">
+	        <field name="name">HR Manager</field>
+	    </record>
+	    <record model="res.groups" id="group_hr_user">
+	        <field name="name">HR User</field>
+	    </record>
+	</data>
+</openerp>

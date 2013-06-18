@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data noupdate="1">
+		<record id="sss_row1" model="ph.payroll.sss">
+			<field name="sss_from">1000.00</field>
+			<field name="sss_to">1249.99</field>
+			<field name="salary_credit">1000.00</field>
+			<field name="sss_er">70.70</field>
+			<field name="sss_ee">33.30</field>
+			<field name="sss_total">104.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">80.70</field>
+			<field name="total_ee">33.30</field>
+			<field name="total_total">114.00</field>
+			<field name="total_contribution">104.00</field>
+		</record>
+		<record id="sss_row2" model="ph.payroll.sss">
+			<field name="sss_from">1250.00</field>
+			<field name="sss_to">1749.99</field>
+			<field name="salary_credit">1500.00</field>
+			<field name="sss_er">106.00</field>
+			<field name="sss_ee">50.00</field>
+			<field name="sss_total">156.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">116.00</field>
+			<field name="total_ee">50.00</field>
+			<field name="total_total">166.00</field>
+			<field name="total_contribution">156.00</field>
+		</record>
+		<record id="sss_row3" model="ph.payroll.sss">
+			<field name="sss_from">1750.00</field>
+			<field name="sss_to">2249.99</field>
+			<field name="salary_credit">2000.00</field>
+			<field name="sss_er">141.30</field>
+			<field name="sss_ee">66.70</field>
+			<field name="sss_total">208.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">151.30</field>
+			<field name="total_ee">66.70</field>
+			<field name="total_total">218.00</field>
+			<field name="total_contribution">208.00</field>
+		</record>
+		<record id="sss_row4" model="ph.payroll.sss">
+			<field name="sss_from">2250.00</field>
+			<field name="sss_to">2749.99</field>
+			<field name="salary_credit">2500.00</field>
+			<field name="sss_er">176.70</field>
+			<field name="sss_ee">83.30</field>
+			<field name="sss_total">260.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">186.70</field>
+			<field name="total_ee">83.30</field>
+			<field name="total_total">270.00</field>
+			<field name="total_contribution">260.00</field>
+		</record>
+		<record id="sss_row5" model="ph.payroll.sss">
+			<field name="sss_from">2750.00</field>
+			<field name="sss_to">3249.99</field>
+			<field name="salary_credit">3000.00</field>
+			<field name="sss_er">212.00</field>
+			<field name="sss_ee">100.00</field>
+			<field name="sss_total">312.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">222.00</field>
+			<field name="total_ee">100.00</field>
+			<field name="total_total">322.00</field>
+			<field name="total_contribution">312.00</field>
+		</record>
+		<record id="sss_row6" model="ph.payroll.sss">
+			<field name="sss_from">3250.00</field>
+			<field name="sss_to">3749.99</field>
+			<field name="salary_credit">3500.00</field>
+			<field name="sss_er">247.30</field>
+			<field name="sss_ee">116.70</field>
+			<field name="sss_total">364.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">257.30</field>
+			<field name="total_ee">116.70</field>
+			<field name="total_total">374.00</field>
+			<field name="total_contribution">364.00</field>
+		</record>
+		<record id="sss_row7" model="ph.payroll.sss">
+			<field name="sss_from">3750.00</field>
+			<field name="sss_to">4249.99</field>
+			<field name="salary_credit">4000.00</field>
+			<field name="sss_er">282.70</field>
+			<field name="sss_ee">133.30</field>
+			<field name="sss_total">364.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">257.30</field>
+			<field name="total_ee">116.70</field>
+			<field name="total_total">374.00</field>
+			<field name="total_contribution">364.00</field>
+		</record>
+		<record id="sss_row8" model="ph.payroll.sss">
+			<field name="sss_from">4250.00</field>
+			<field name="sss_to">4749.99</field>
+			<field name="salary_credit">4500.00</field>
+			<field name="sss_er">318.00</field>
+			<field name="sss_ee">150.00</field>
+			<field name="sss_total">468.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">328.00</field>
+			<field name="total_ee">150.00</field>
+			<field name="total_total">478.00</field>
+			<field name="total_contribution">468.00</field>
+		</record>
+		<record id="sss_row9" model="ph.payroll.sss">
+			<field name="sss_from">4750.00</field>
+			<field name="sss_to">5249.99</field>
+			<field name="salary_credit">5000.00</field>
+			<field name="sss_er">353.30</field>
+			<field name="sss_ee">166.70</field>
+			<field name="sss_total">520.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">363.30</field>
+			<field name="total_ee">166.70</field>
+			<field name="total_total">530.00</field>
+			<field name="total_contribution">520.00</field>
+		</record>
+		<record id="sss_row10" model="ph.payroll.sss">
+			<field name="sss_from">5250.00</field>
+			<field name="sss_to">5749.99</field>
+			<field name="salary_credit">5500.00</field>
+			<field name="sss_er">388.70</field>
+			<field name="sss_ee">183.30</field>
+			<field name="sss_total">572.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">398.70</field>
+			<field name="total_ee">183.30</field>
+			<field name="total_total">582.00</field>
+			<field name="total_contribution">572.00</field>
+		</record>
+		<record id="sss_row11" model="ph.payroll.sss">
+			<field name="sss_from">5750.00</field>
+			<field name="sss_to">6249.99</field>
+			<field name="salary_credit">6000.00</field>
+			<field name="sss_er">424.00</field>
+			<field name="sss_ee">200.00</field>
+			<field name="sss_total">624.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">434.00</field>
+			<field name="total_ee">200.00</field>
+			<field name="total_total">634.00</field>
+			<field name="total_contribution">624.00</field>
+		</record>
+		<record id="sss_row12" model="ph.payroll.sss">
+			<field name="sss_from">6250.00</field>
+			<field name="sss_to">6749.99</field>
+			<field name="salary_credit">6500.00</field>
+			<field name="sss_er">459.30</field>
+			<field name="sss_ee">216.70</field>
+			<field name="sss_total">676.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">469.30</field>
+			<field name="total_ee">216.70</field>
+			<field name="total_total">686.00</field>
+			<field name="total_contribution">676.00</field>
+		</record>
+		<record id="sss_row13" model="ph.payroll.sss">
+			<field name="sss_from">6750.00</field>
+			<field name="sss_to">7249.99</field>
+			<field name="salary_credit">7000.00</field>
+			<field name="sss_er">494.70</field>
+			<field name="sss_ee">233.30</field>
+			<field name="sss_total">728.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">494.70</field>
+			<field name="total_ee">233.30</field>
+			<field name="total_total">738.00</field>
+			<field name="total_contribution">728.00</field>
+		</record>
+		<record id="sss_row14" model="ph.payroll.sss">
+			<field name="sss_from">7250.00</field>
+			<field name="sss_to">7749.99</field>
+			<field name="salary_credit">7500.00</field>
+			<field name="sss_er">530.00</field>
+			<field name="sss_ee">250.00</field>
+			<field name="sss_total">780.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">540.00</field>
+			<field name="total_ee">250.00</field>
+			<field name="total_total">790.00</field>
+			<field name="total_contribution">780.00</field>
+		</record>
+		<record id="sss_row15" model="ph.payroll.sss">
+			<field name="sss_from">7750.00</field>
+			<field name="sss_to">8249.99</field>
+			<field name="salary_credit">8000.00</field>
+			<field name="sss_er">565.30</field>
+			<field name="sss_ee">266.70</field>
+			<field name="sss_total">832.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">575.30</field>
+			<field name="total_ee">266.70</field>
+			<field name="total_total">842.00</field>
+			<field name="total_contribution">832.00</field>
+		</record>
+		<record id="sss_row16" model="ph.payroll.sss">
+			<field name="sss_from">8250.00</field>
+			<field name="sss_to">8749.99</field>
+			<field name="salary_credit">8500.00</field>
+			<field name="sss_er">600.70</field>
+			<field name="sss_ee">283.30</field>
+			<field name="sss_total">884.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">610.70</field>
+			<field name="total_ee">283.30</field>
+			<field name="total_total">894.00</field>
+			<field name="total_contribution">884.00</field>
+		</record>
+		<record id="sss_row17" model="ph.payroll.sss">
+			<field name="sss_from">8750.00</field>
+			<field name="sss_to">9249.99</field>
+			<field name="salary_credit">9000.00</field>
+			<field name="sss_er">636.00</field>
+			<field name="sss_ee">300.00</field>
+			<field name="sss_total">936.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">646.00</field>
+			<field name="total_ee">300.00</field>
+			<field name="total_total">946.00</field>
+			<field name="total_contribution">936.00</field>
+		</record>
+		<record id="sss_row18" model="ph.payroll.sss">
+			<field name="sss_from">9250.00</field>
+			<field name="sss_to">9749.99</field>
+			<field name="salary_credit">9500.00</field>
+			<field name="sss_er">671.30</field>
+			<field name="sss_ee">316.70</field>
+			<field name="sss_total">988.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">681.30</field>
+			<field name="total_ee">316.70</field>
+			<field name="total_total">998.00</field>
+			<field name="total_contribution">988.00</field>
+		</record>
+		<record id="sss_row19" model="ph.payroll.sss">
+			<field name="sss_from">9750.00</field>
+			<field name="sss_to">10249.99</field>
+			<field name="salary_credit">10000.00</field>
+			<field name="sss_er">706.70</field>
+			<field name="sss_ee">333.30</field>
+			<field name="sss_total">1040.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">716.70</field>
+			<field name="total_ee">333.30</field>
+			<field name="total_total">1050.00</field>
+			<field name="total_contribution">1040.00</field>
+		</record>
+		<record id="sss_row20" model="ph.payroll.sss">
+			<field name="sss_from">10250.00</field>
+			<field name="sss_to">10749.99</field>
+			<field name="salary_credit">10500.00</field>
+			<field name="sss_er">742.00</field>
+			<field name="sss_ee">350.00</field>
+			<field name="sss_total">1092.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">752.00</field>
+			<field name="total_ee">350.00</field>
+			<field name="total_total">1102.00</field>
+			<field name="total_contribution">1092.00</field>
+		</record>
+		<record id="sss_row21" model="ph.payroll.sss">
+			<field name="sss_from">10750.00</field>
+			<field name="sss_to">11249.99</field>
+			<field name="salary_credit">11000.00</field>
+			<field name="sss_er">777.30</field>
+			<field name="sss_ee">366.70</field>
+			<field name="sss_total">1144.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">777.30</field>
+			<field name="total_ee">366.70</field>
+			<field name="total_total">1154.00</field>
+			<field name="total_contribution">1144.00</field>
+		</record>
+		<record id="sss_row22" model="ph.payroll.sss">
+			<field name="sss_from">11250.00</field>
+			<field name="sss_to">11749.99</field>
+			<field name="salary_credit">11500.00</field>
+			<field name="sss_er">812.70</field>
+			<field name="sss_ee">383.30</field>
+			<field name="sss_total">1196.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">822.70</field>
+			<field name="total_ee">383.30</field>
+			<field name="total_total">1206.00</field>
+			<field name="total_contribution">1196.00</field>
+		</record>
+		<record id="sss_row23" model="ph.payroll.sss">
+			<field name="sss_from">11750.00</field>
+			<field name="sss_to">12249.99</field>
+			<field name="salary_credit">12000.00</field>
+			<field name="sss_er">848.00</field>
+			<field name="sss_ee">400.00</field>
+			<field name="sss_total">1248.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">858.00</field>
+			<field name="total_ee">400.00</field>
+			<field name="total_total">1258.00</field>
+			<field name="total_contribution">1248.00</field>
+		</record>
+		<record id="sss_row24" model="ph.payroll.sss">
+			<field name="sss_from">12250.00</field>
+			<field name="sss_to">12749.99</field>
+			<field name="salary_credit">12500.00</field>
+			<field name="sss_er">883.30</field>
+			<field name="sss_ee">416.70</field>
+			<field name="sss_total">1300.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">893.30</field>
+			<field name="total_ee">416.70</field>
+			<field name="total_total">1310.00</field>
+			<field name="total_contribution">1300.00</field>
+		</record>
+		<record id="sss_row25" model="ph.payroll.sss">
+			<field name="sss_from">12750.00</field>
+			<field name="sss_to">13249.99</field>
+			<field name="salary_credit">13000.00</field>
+			<field name="sss_er">918.70</field>
+			<field name="sss_ee">433.30</field>
+			<field name="sss_total">1352.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">928.70</field>
+			<field name="total_ee">433.30</field>
+			<field name="total_total">1362.00</field>
+			<field name="total_contribution">1352.00</field>
+		</record>
+		<record id="sss_row26" model="ph.payroll.sss">
+			<field name="sss_from">13250.00</field>
+			<field name="sss_to">13749.99</field>
+			<field name="salary_credit">13500.00</field>
+			<field name="sss_er">954.00</field>
+			<field name="sss_ee">450.00</field>
+			<field name="sss_total">1404.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">964.00</field>
+			<field name="total_ee">450.00</field>
+			<field name="total_total">1414.00</field>
+			<field name="total_contribution">1404.00</field>
+		</record>
+		<record id="sss_row27" model="ph.payroll.sss">
+			<field name="sss_from">13750.00</field>
+			<field name="sss_to">14249.99</field>
+			<field name="salary_credit">14000.00</field>
+			<field name="sss_er">989.30</field>
+			<field name="sss_ee">466.70</field>
+			<field name="sss_total">1456.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">999.30</field>
+			<field name="total_ee">466.70</field>
+			<field name="total_total">1466.00</field>
+			<field name="total_contribution">1456.00</field>
+		</record>
+		<record id="sss_row28" model="ph.payroll.sss">
+			<field name="sss_from">14250.00</field>
+			<field name="sss_to">14749.99</field>
+			<field name="salary_credit">14500.00</field>
+			<field name="sss_er">1024.70</field>
+			<field name="sss_ee">483.30</field>
+			<field name="sss_total">1508.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">1034.70</field>
+			<field name="total_ee">483.30</field>
+			<field name="total_total">1518.00</field>
+			<field name="total_contribution">1508.00</field>
+		</record>
+		<record id="sss_row29" model="ph.payroll.sss">
+			<field name="sss_from">14750.00</field>
+			<field name="sss_to">200000.00</field>
+			<field name="salary_credit">15000.00</field>
+			<field name="sss_er">1060.00</field>
+			<field name="sss_ee">500.00</field>
+			<field name="sss_total">1560.00</field>
+			<field name="ec_er">10.00</field>
+			<field name="total_er">1070.00</field>
+			<field name="total_ee">500.00</field>
+			<field name="total_total">1570.00</field>
+			<field name="total_contribution">1560.00</field>
+		</record>
+	</data>
+</openerp>

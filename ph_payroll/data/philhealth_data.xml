@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record id="philhealth_row1" model="ph.payroll.philhealth">
+			<field name="philhealth_from">0.00</field>
+			<field name="philhealth_to">7999.99</field>
+			<field name="salary_base">7000.00</field>
+			<field name="employee">87.50</field>
+			<field name="employer">87.50</field>
+			<field name="total">175.00</field>
+		</record>
+		<record id="philhealth_row2" model="ph.payroll.philhealth">
+			<field name="philhealth_from">8000.00</field>
+			<field name="philhealth_to">8999.99</field>
+			<field name="salary_base">8000.00</field>
+			<field name="employee">100.00</field>
+			<field name="employer">100.00</field>
+			<field name="total">200.00</field>
+		</record>
+		<record id="philhealth_row3" model="ph.payroll.philhealth">
+			<field name="philhealth_from">9000.00</field>
+			<field name="philhealth_to">9999.99</field>
+			<field name="salary_base">9000.00</field>
+			<field name="employee">112.50</field>
+			<field name="employer">112.50</field>
+			<field name="total">225.00</field>
+		</record>
+		<record id="philhealth_row4" model="ph.payroll.philhealth">
+			<field name="philhealth_from">10000.00</field>
+			<field name="philhealth_to">10999.99</field>
+			<field name="salary_base">10000.00</field>
+			<field name="employee">125.00</field>
+			<field name="employer">125.00</field>
+			<field name="total">250.00</field>
+		</record>
+		<record id="philhealth_row5" model="ph.payroll.philhealth">
+			<field name="philhealth_from">11000.00</field>
+			<field name="philhealth_to">11999.99</field>
+			<field name="salary_base">11000.00</field>
+			<field name="employee">137.50</field>
+			<field name="employer">137.50</field>
+			<field name="total">275.00</field>
+		</record>
+		<record id="philhealth_row6" model="ph.payroll.philhealth">
+			<field name="philhealth_from">12000.00</field>
+			<field name="philhealth_to">12999.99</field>
+			<field name="salary_base">12000.00</field>
+			<field name="employee">150.00</field>
+			<field name="employer">150.00</field>
+			<field name="total">300.00</field>
+		</record>
+		<record id="philhealth_row7" model="ph.payroll.philhealth">
+			<field name="philhealth_from">13000.00</field>
+			<field name="philhealth_to">13999.99</field>
+			<field name="salary_base">13000.00</field>
+			<field name="employee">162.50</field>
+			<field name="employer">162.50</field>
+			<field name="total">325.00</field>
+		</record>
+		<record id="philhealth_row8" model="ph.payroll.philhealth">
+			<field name="philhealth_from">14000.00</field>
+			<field name="philhealth_to">14999.99</field>
+			<field name="salary_base">14000.00</field>
+			<field name="employee">175.00</field>
+			<field name="employer">175.00</field>
+			<field name="total">350.00</field>
+		</record>
+		<record id="philhealth_row9" model="ph.payroll.philhealth">
+			<field name="philhealth_from">15000.00</field>
+			<field name="philhealth_to">15999.99</field>
+			<field name="salary_base">15000.00</field>
+			<field name="employee">187.50</field>
+			<field name="employer">187.50</field>
+			<field name="total">375.00</field>
+		</record>
+		<record id="philhealth_row10" model="ph.payroll.philhealth">
+			<field name="philhealth_from">16000.00</field>
+			<field name="philhealth_to">16999.99</field>
+			<field name="salary_base">16000.00</field>
+			<field name="employee">200.00</field>
+			<field name="employer">200.00</field>
+			<field name="total">400.00</field>
+		</record>
+		<record id="philhealth_row11" model="ph.payroll.philhealth">
+			<field name="philhealth_from">17000.00</field>
+			<field name="philhealth_to">17999.99</field>
+			<field name="salary_base">17000.00</field>
+			<field name="employee">212.50</field>
+			<field name="employer">212.50</field>
+			<field name="total">425.00</field>
+		</record>
+		<record id="philhealth_row12" model="ph.payroll.philhealth">
+			<field name="philhealth_from">18000.00</field>
+			<field name="philhealth_to">18999.99</field>
+			<field name="salary_base">18000.00</field>
+			<field name="employee">225.00</field>
+			<field name="employer">225.00</field>
+			<field name="total">450.00</field>
+		</record>
+		<record id="philhealth_row13" model="ph.payroll.philhealth">
+			<field name="philhealth_from">19000.00</field>
+			<field name="philhealth_to">19999.99</field>
+			<field name="salary_base">19000.00</field>
+			<field name="employee">237.50</field>
+			<field name="employer">237.50</field>
+			<field name="total">475.00</field>
+		</record>
+		<record id="philhealth_row14" model="ph.payroll.philhealth">
+			<field name="philhealth_from">20000.00</field>
+			<field name="philhealth_to">20999.99</field>
+			<field name="salary_base">20000.00</field>
+			<field name="employee">250.00</field>
+			<field name="employer">250.00</field>
+			<field name="total">500.00</field>
+		</record>
+		<record id="philhealth_row15" model="ph.payroll.philhealth">
+			<field name="philhealth_from">21000.00</field>
+			<field name="philhealth_to">21999.99</field>
+			<field name="salary_base">21000.00</field>
+			<field name="employee">262.50</field>
+			<field name="employer">262.50</field>
+			<field name="total">525.00</field>
+		</record>
+		<record id="philhealth_row16" model="ph.payroll.philhealth">
+			<field name="philhealth_from">22000.00</field>
+			<field name="philhealth_to">22999.99</field>
+			<field name="salary_base">22000.00</field>
+			<field name="employee">275.00</field>
+			<field name="employer">275.00</field>
+			<field name="total">550.00</field>
+		</record>
+		<record id="philhealth_row17" model="ph.payroll.philhealth">
+			<field name="philhealth_from">23000.00</field>
+			<field name="philhealth_to">23999.99</field>
+			<field name="salary_base">23000.00</field>
+			<field name="employee">287.50</field>
+			<field name="employer">287.50</field>
+			<field name="total">575.00</field>
+		</record>
+		<record id="philhealth_row18" model="ph.payroll.philhealth">
+			<field name="philhealth_from">24000.00</field>
+			<field name="philhealth_to">24999.99</field>
+			<field name="salary_base">24000.00</field>
+			<field name="employee">300.00</field>
+			<field name="employer">300.00</field>
+			<field name="total">600.00</field>
+		</record>
+		<record id="philhealth_row19" model="ph.payroll.philhealth">
+			<field name="philhealth_from">25000.00</field>
+			<field name="philhealth_to">25999.99</field>
+			<field name="salary_base">25000.00</field>
+			<field name="employee">312.50</field>
+			<field name="employer">312.50</field>
+			<field name="total">625.00</field>
+		</record>
+		<record id="philhealth_row20" model="ph.payroll.philhealth">
+			<field name="philhealth_from">26000.00</field>
+			<field name="philhealth_to">26999.99</field>
+			<field name="salary_base">26000.00</field>
+			<field name="employee">325.00</field>
+			<field name="employer">325.00</field>
+			<field name="total">650.00</field>
+		</record>
+		<record id="philhealth_row21" model="ph.payroll.philhealth">
+			<field name="philhealth_from">27000.00</field>
+			<field name="philhealth_to">27999.99</field>
+			<field name="salary_base">27000.00</field>
+			<field name="employee">337.50</field>
+			<field name="employer">337.50</field>
+			<field name="total">675.00</field>
+		</record>
+		<record id="philhealth_row22" model="ph.payroll.philhealth">
+			<field name="philhealth_from">28000.00</field>
+			<field name="philhealth_to">28999.99</field>
+			<field name="salary_base">28000.00</field>
+			<field name="employee">350.00</field>
+			<field name="employer">350.00</field>
+			<field name="total">700.00</field>
+		</record>
+		<record id="philhealth_row23" model="ph.payroll.philhealth">
+			<field name="philhealth_from">29000.00</field>
+			<field name="philhealth_to">29999.99</field>
+			<field name="salary_base">29000.00</field>
+			<field name="employee">362.50</field>
+			<field name="employer">362.50</field>
+			<field name="total">725.00</field>
+		</record>
+		<record id="philhealth_row24" model="ph.payroll.philhealth">
+			<field name="philhealth_from">30000.00</field>
+			<field name="philhealth_to">30999.99</field>
+			<field name="salary_base">30000.00</field>
+			<field name="employee">375.00</field>
+			<field name="employer">375.00</field>
+			<field name="total">750.00</field>
+		</record>
+		<record id="philhealth_row25" model="ph.payroll.philhealth">
+			<field name="philhealth_from">31000.00</field>
+			<field name="philhealth_to">31999.99</field>
+			<field name="salary_base">31000.00</field>
+			<field name="employee">387.50</field>
+			<field name="employer">387.50</field>
+			<field name="total">775.00</field>
+		</record>
+		<record id="philhealth_row26" model="ph.payroll.philhealth">
+			<field name="philhealth_from">32000.00</field>
+			<field name="philhealth_to">32999.99</field>
+			<field name="salary_base">32000.00</field>
+			<field name="employee">400.00</field>
+			<field name="employer">400.00</field>
+			<field name="total">800.00</field>
+		</record>
+		<record id="philhealth_row26" model="ph.payroll.philhealth">
+			<field name="philhealth_from">33000.00</field>
+			<field name="philhealth_to">33999.99</field>
+			<field name="salary_base">33000.00</field>
+			<field name="employee">412.50</field>
+			<field name="employer">412.50</field>
+			<field name="total">825.00</field>
+		</record>
+		<record id="philhealth_row26" model="ph.payroll.philhealth">
+			<field name="philhealth_from">34000.00</field>
+			<field name="philhealth_to">34999.99</field>
+			<field name="salary_base">34000.00</field>
+			<field name="employee">425.00</field>
+			<field name="employer">425.00</field>
+			<field name="total">850.00</field>
+		</record>
+		<record id="philhealth_row26" model="ph.payroll.philhealth">
+			<field name="philhealth_from">35000.00</field>
+			<field name="philhealth_to">2000000.00</field>
+			<field name="salary_base">35000.00</field>
+			<field name="employee">437.50</field>
+			<field name="employer">437.50</field>
+			<field name="total">875.00</field>
+		</record>
+	</data>
+</openerp>

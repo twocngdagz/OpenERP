@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data noupdate="1">
+		<record id="ph_human_resource.mederic" model="ph.human.resource">
+			<field name="basic" eval="12500.00"/>
+			<field name="withholding_id" ref="withhold_row4"/>
+			<field name="sss_contrib" eval="416.70"/>
+			<field name="philhealth_contrib" eval="150.00"/>
+			<field name="pagibig_contrib" eval="250.00"/>
+			<field name="meal_allowance" eval="300.00"/>
+			<field name="sss_loan" eval="543.59"/>
+		</record>
+		<record id="ph_human_resource.mark" model="ph.human.resource">
+			<field name="basic" eval="15500.00"/>
+			<field name="withholding_id" ref="withhold_row4"/>
+			<field name="sss_contrib" eval="500.00"/>
+			<field name="philhealth_contrib" eval="187.50"/>
+			<field name="pagibig_contrib" eval="310.00"/>
+			<field name="meal_allowance" eval="350.00"/>
+			<field name="sss_loan" eval="621.59"/>
+		</record>
+		<record id="ph_human_resource.jennifer" model="ph.human.resource">
+			<field name="basic" eval="975.00"/>
+			<field name="withholding_id" ref="withhold_row4"/>
+			<field name="sss_contrib" eval="300.00"/>
+			<field name="philhealth_contrib" eval="112.50"/>
+			<field name="pagibig_contrib" eval="181.50"/>
+			<field name="meal_allowance" eval="200.00"/>
+			<field name="sss_loan" eval="323.59"/>
+		</record>
+		<record id="ph_human_resource.winston" model="ph.human.resource">
+			<field name="basic" eval="62450.00"/>
+			<field name="withholding_id" ref="withhold_row4"/>
+			<field name="sss_contrib" eval="500.00"/>
+			<field name="philhealth_contrib" eval="375.00"/>
+			<field name="pagibig_contrib" eval="1249.00"/>
+			<field name="meal_allowance" eval="300.00"/>
+			<field name="sss_loan" eval="413.59"/>
+		</record>
+		<record id="ph_human_resource.ethan" model="ph.human.resource">
+			<field name="basic" eval="35000.00"/>
+			<field name="withholding_id" ref="withhold_row4"/>
+			<field name="sss_contrib" eval="500.00"/>
+			<field name="philhealth_contrib" eval="375.00"/>
+			<field name="pagibig_contrib" eval="700.00"/>
+			<field name="meal_allowance" eval="300.00"/>
+			<field name="sss_loan" eval="589.59"/>
+		</record>
+		<record id="ph_human_resource.markanthony" model="ph.human.resource">
+			<field name="basic" eval="35000.00"/>
+			<field name="withholding_id" ref="withhold_row4"/>
+			<field name="sss_contrib" eval="400.00"/>
+			<field name="philhealth_contrib" eval="150.00"/>
+			<field name="pagibig_contrib" eval="240.00"/>
+			<field name="meal_allowance" eval="400.00"/>
+			<field name="sss_loan" eval="543.59"/>
+		</record>
+	</data>
+</openerp>
+

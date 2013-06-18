@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_hr_admin_user,hr.hr.admin.user,model_ph_human_resource,ph_human_resource.group_hr_admin,1,1,1,1
+access_hr_hr_manager_user,hr.hr.manager.user,model_ph_human_resource,ph_human_resource.group_hr_manager,1,1,1,1
+access_hr_hr_user_user,hr.hr.user.user,model_ph_human_resource,ph_human_resource.group_hr_user,1,0,0,0
+access_hr_dept_admin_user,hr.dept.admin.user,model_ph_hr_department,ph_human_resource.group_hr_admin,1,1,1,1
+access_hr_dept_manager_user,hr.dept.manager.user,model_ph_hr_department,ph_human_resource.group_hr_manager,1,1,1,1
+access_hr_dept_user_user,hr.dept.user.user,model_ph_hr_department,ph_human_resource.group_hr_user,1,0,0,0
+access_hr_company_admin_user,hr.company.admin.user,model_ph_hr_company,ph_human_resource.group_hr_admin,1,1,1,1
+access_hr_company_manager_user,hr.company.manager.user,model_ph_hr_company,ph_human_resource.group_hr_manager,1,1,1,1
+access_hr_company_user_user,hr.company.user.user,model_ph_hr_company,ph_human_resource.group_hr_user,1,0,0,0
+access_hr_job_admin_user,hr.job.admin.user,model_ph_hr_job,ph_human_resource.group_hr_admin,1,1,1,1
+access_hr_job_manager_user,hr.job.manager.user,model_ph_hr_job,ph_human_resource.group_hr_manager,1,1,1,1
+access_hr_job_user_user,hr.job.user.user,model_ph_hr_job,ph_human_resource.group_hr_user,1,0,0,0

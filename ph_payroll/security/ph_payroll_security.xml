@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data noupdate="0">
+		<record model="res.groups" id="group_payroll_admin">
+	        <field name="name">Payroll Administrator</field>
+	    </record>
+		<record model="res.groups" id="group_payroll_manager">
+	        <field name="name">Payroll Manager</field>
+	    </record>
+	    <record model="res.groups" id="group_payroll_user">
+	        <field name="name">Payroll User</field>
+	    </record>
+	</data>
+</openerp>

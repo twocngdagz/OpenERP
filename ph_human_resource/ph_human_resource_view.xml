@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<menuitem name="Human Resource" id="menu_root_payroll_system" sequence="15" groups="group_hr_admin,group_hr_manager,group_hr_user"/>
+		
+		<!-- Department View -->
+		<!-- Form View -->
+		<record model="ir.ui.view" id="view_ph_hr_department_form">
+		    <field name="name">ph.hr.department.form</field>
+		    <field name="model">ph.hr.department</field>
+		    <field name="type">form</field>
+		    <field name="arch" type="xml">
+			<form string="Department">
+				<field name="name" select="1"/>
+				<field name="manager_id" />
+				<field name="active"/>
+				<notebook colspan="4">
+					<page string="Employees">
+                        <field name="member_ids" colspan="4" nolabel="1" widget="many2many" mode="tree,form"/>
+                    </page>
+				</notebook>
+			</form>
+		    </field>
+		</record>
+		 <!-- End of Form View -->
+		
+		
+		<!-- Tree View Department-->
+		<record model="ir.ui.view" id="view_ph_hr_department_tree">
+		    <field name="name">ph.hr.department.tree</field>
+		    <field name="model">ph.hr.department</field>
+		    <field name="type">tree</field>
+		    <field name="arch" type="xml">
+		        <tree string="Department List">
+		            <field name="name"/>
+		        </tree>
+		    </field>
+		</record>
+		<!-- End of Tree View -->
+        
+		<!-- Action Department -->
+		<record model="ir.actions.act_window" id="action_ph_hr_department_resource">
+        	<field name="name">Department</field>
+			<field name="res_model">ph.hr.department</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+	        </record>
+	    	<!-- End of Action Employees -->
+	    
+	    <menuitem name="Department" id="menu_ph_hr_department_resource" parent="menu_root_payroll_system" action="action_ph_hr_department_resource" />
+        
+		
+		
+		<!-- Employee View -->
+		<!-- Form View -->
+		<record model="ir.ui.view" id="view_ph_human_resource_form">
+            <field name="name">ph.human.resource.form</field>
+            <field name="model">ph.human.resource</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Human Resource">
+                	<group colspan="4" col="8">
+                        <group colspan="6" col="6">
+                        	<field name="name" />
+                        	<field name="mname" />
+			                <field name="lname" select="1"/>
+			                <field name="suffix"/>
+                        	<field name="user_id"/>
+                        	<field name="company_id"/>
+                        	<field name="department_id"/>
+                        	<field name="job_id"/>
+                        	<field name="contract_id"/>
+                        	<field name="active"/>
+                    	</group>
+                    	<group colspan="2" col="1">
+	                		<field name="photo" widget='image' nolabel="1"/>
+	                	</group>
+                    </group>
+                    <notebook colspan="6">
+                		<page string="Personal Information">
+                            <group col="2" colspan="2">
+                                <separator colspan="2" string="Social IDs"/>
+                                <field name="sss"/>
+                                <field name="tin" />
+                                <field name="hdmf" />
+                                <field name="philhealth"/>
+                                <field name="id_no"/>
+                            </group>
+                            <group col="2" colspan="2">
+                                <separator string="Status" colspan="2"/>
+                                <field name="gender"/>
+                                <field name="marital"/>
+                                <field name="hire_date"/>
+                                <field name="due_date"/>
+                                <field name="birth_date"/>
+                            </group>
+                            <group col="2" colspan="2">
+                                <separator string="Contact Information" colspan="2"/>
+                                <field name="home_address" colspan="2"/>
+                                <field name="permanent_address" colspan="2"/>
+                                <field name="personal_mobile" colspan="2"/>
+                                <field name="telephone"/>
+                                <field name="mobile_phone"/>
+                                <field name="work_email" widget="email" />
+                                <field name="position"/>
+                            </group>
+                        </page>
+                	</notebook>
+                </form>
+            </field>
+        </record>
+        <!-- End of Form View -->
+        
+        <!-- Tree View -->
+		<record model="ir.ui.view" id="view_ph_human_resource_tree">
+            <field name="name">ph.human.resource.tree</field>
+            <field name="model">ph.human.resource</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Human Resource List">
+                    <field name="name"/>
+                    <field name="lname"/>
+                    <field name="company_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="hire_date"/>
+                </tree>
+            </field>
+        </record>
+        <!-- End of Tree View -->
+         
+        <!-- Action Employees -->
+        <record model="ir.actions.act_window" id="action_ph_human_resource">
+	        <field name="name">ph.human.resource</field>
+	        <field name="res_model">ph.human.resource</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	    </record>
+	    <!-- End of Action Employees -->
+	    
+	    <!-- Employee Search View -->
+	    <record id="view_employee_filter" model="ir.ui.view">
+            <field name="name">Employee</field>
+            <field name="model">ph.human.resource</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Employees">
+                	<group string="Gender">
+                		<filter name="male" icon="terp-check" string="Male" domain="[('gender','=','male')]"/>
+						<filter name="female" icon="terp-check" string="Female" domain="[('gender','=','female')]"/>
+                	</group>
+                	<newline/>
+                	<group>
+                		<field name="name"/>
+	                    <field name="lname"/>
+	                    <field name="hire_date"/>
+	                    <field name="department_id" widget="selection">
+	                    	<filter icon="terp-personal+" domain="[('department_id','=',context.get('department_id',False))]" string="My Departments Employee"/>
+	                    </field>
+	                    <field name="job_id" widget="selection"/>
+	                    <field name="company_id" widget="selection"/>
+                	</group>
+                    <newline />
+                    <group expand="0" string="Group By...">
+	                    <filter string="Department" icon="terp-personal+" domain="[]" context="{'group_by':'department_id'}"/>
+	                    <filter string="Job" icon="terp-gtk-select-all" domain="[]" context="{'group_by':'job_id'}"/>
+	                    <filter string="Company" icon="terp-go-home" domain="[]" context="{'group_by':'company_id'}" />
+                    </group>
+                </search>
+             </field>
+         </record>
+	    <!-- End of Employee Search View -->
+	    
+	    
+	    <!-- End of Employee View -->
+
+	<record model="ir.ui.view" id="view_ph_human_resource_kanban">
+	    <field name="name">ph.human.resource.kanban</field>
+	    <field name="model">ph.human.resource</field>
+	    <field name="type">kanban</field>
+	    <field name="arch" type="xml">
+		<kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_employee_vignette">
+                            <div class="oe_employee_image">
+                                <a type="edit"><img t-att-src="kanban_image('ph.human.resource', 'photo', record.id.value)" class="oe_employee_picture"/></a>
+                            </div>
+                            <div class="oe_employee_details">
+                                <h4><a type="edit"><field name="fullname"/></a></h4>
+                                <ul class="ph_hr_resource">
+                                	<li t-if="record.company_id.raw_value"><field name="company_id"/></li>
+                                    <li t-if="record.department_id.raw_value"><field name="department_id"/></li>
+                                    <li t-if="record.notify.raw_value"><span class="blink"><field name="notify"/></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <script>
+                        	$('.oe_employee_picture').load(function() { if($(this).width() > $(this).height()) { $(this).addClass('oe_employee_picture_wide') } });
+                        	var nIntervId;
+  
+							function changeColor() {
+							  nIntervId = setInterval(flashText, 1000);
+							}
+							  
+							function flashText() {
+							  if ($(".blink").css("visibility") == "visible") {
+							    $(".blink").css("visibility", "hidden");
+							  }
+							    else {
+							      $(".blink").css("visibility", "visible");
+							    }
+							}
+							changeColor();
+<!-- 							$.fn.blink = function(options) -->
+<!-- 							{ -->
+<!-- 								var defaults = { delay:500 }; -->
+<!-- 								var options = $.extend(defaults, options); -->
+								
+<!-- 								return this.each(function() -->
+<!-- 								{ -->
+<!-- 									var obj = $(this); -->
+<!-- 									setInterval(function() -->
+<!-- 									{ -->
+<!-- 										if($(obj).css("visibility") == "visible") -->
+<!-- 										{ -->
+<!-- 											$(obj).css('visibility','hidden'); -->
+					
+<!-- 										} -->
+<!-- 										else -->
+<!-- 										{ -->
+<!-- 											$(obj).css('visibility','visible'); -->
+<!-- 											$(obj).css('background','red'); -->
+<!-- 											$(obj).css('color','white'); -->
+<!-- 										} -->
+<!-- 									}, options.delay); -->
+<!-- 								}); -->
+<!-- 							} -->
+<!-- 							$(".blink").blink(); -->
+                        </script>                    
+                    </t>
+                </templates>
+            </kanban>
+	    </field>
+	</record>
+	
+	
+	<!-- Kanban View -->
+	
+	<record id="open_view_employee_list_my" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="res_model">ph.human.resource</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[]</field>
+        <field name="view_id" eval="False"/>  
+        <field name="search_view_id" ref="view_employee_filter"/>
+        <field name="help">Here you can manage your work force by creating employees and assigning them specific properties in the system. Maintain all employee related information and keep track of anything that needs to be recorded for them. The personal information tab will help you maintain their identity data. The Categories tab gives you the opportunity to assign them related employee categories depending on their position and activities within the company. A category can be a seniority level within the company or a department. The Timesheets tab allows to assign them a specific timesheet and analytic journal where they will be able to enter time through the system. In the note tab, you can enter text data that should be recorded for a specific employee.</field>
+    </record>
+	<record id="open_view_employee_list_my_kanban" model="ir.actions.act_window.view">
+        <field name="sequence" eval="0"/>
+        <field name="tag">employee.action</field>
+        <field name="view_mode">kanban</field>
+        <field name="act_window_id" ref="open_view_employee_list_my"/>
+    </record>
+<!--     <record model="ir.actions.client" id="action_hr_employee"> -->
+<!--       <field name="name">Employee</field> -->
+<!--       <field name="tag">employee.action</field> -->
+<!--     </record> -->
+<!--     <record id="menu_point_root_touchscreen" model="ir.ui.menu"> -->
+<!--           <field name="name">Point of Sale</field> -->
+<!--           <field name="sequence" eval="21"/> -->
+<!--           <field name="action" ref="action_hr_employee"/> -->
+<!--         </record> -->
+    
+
+	<!-- End Kanban View -->
+	
+	
+	
+	<!-- Job Position -->
+	
+		<record id="view_hr_job_form" model="ir.ui.view">
+            <field name="name">ph.hr.job.form</field>
+            <field name="model">ph.hr.job</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Job">
+                    <group col="6" colspan="4">
+                    <field name="name" />
+                    <field name="department_id"/>
+                    <field name="company_id" widget="selection"/>
+                    <newline/>
+                    <field name="no_of_recruitment" on_change="on_change_expected_employee(no_of_recruitment,no_of_employee)"/>
+                    <field name="no_of_employee"/>
+                    <field name="expected_employees"/>
+                    </group>
+                    <newline/>
+                    <notebook colspan="4">
+                        <page string="Description">
+                            <separator colspan="4" string="Job Description"/>
+                            <field name="description" colspan="4" nolabel="1"/>
+                            <separator colspan="4" string="Requirements"/>
+                            <field name="requirements" colspan="4" nolabel="1"/>
+                        </page>
+                        <page string="Employees">
+                            <field name="employee_ids" colspan="4" nolabel="1" widget="many2many" mode="tree,form"/>
+                        </page>
+                    </notebook>
+                    <group col="6" colspan="4">
+                        <field name="state" widget="statusbar" statusbar_visible="recruit,open"/>
+                        <button name="job_recruitement" string="In Recruitement" states="open" type="object" icon="gtk-go-forward"/>
+                        <button name="job_open" string="In Position" states="old,recruit" type="object" icon="terp-camera_test"/>
+                        <button name="job_old" string="Mark as Old" states="open,recruit" type="object" icon="gtk-cancel"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hr_job_tree" model="ir.ui.view">
+            <field name="name">ph.hr.job.tree</field>
+            <field name="model">ph.hr.job</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Job">
+                    <field name="name" />
+                    <field name="department_id"/>
+                    <field name="company_id"/>
+                    <field name="expected_employees"/>
+                    <field name="no_of_employee"/>
+                    <field name="no_of_recruitment"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_job_filter" model="ir.ui.view">
+            <field name="name">Job</field>
+            <field name="model">ph.hr.job</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Jobs">
+                    <filter icon="terp-camera_test"  
+                            domain="[('state','=','open')]" 
+                            string="In Position"
+                            help="In Position"/>
+                    <filter icon="terp-personal+"  domain="[('state','=','recruit')]" string="In Recruitment"
+                        help="In Recruitment"/>
+                    <separator orientation="vertical"/>
+                    <field name="name"/>
+                    <field name="department_id" widget="selection">
+                      <filter icon="terp-personal+" domain="[('department_id', '=', context.get('department_id', False))]" help="My Departments Jobs"/>
+                    </field>
+                    <newline />
+                    <group expand="0" string="Group By...">
+                    <filter string="Department" icon="terp-personal+" domain="[]" context="{'group_by':'department_id'}"/>
+                    <filter string="State" icon="terp-stock_effects-object-colorize" domain="[]" context="{'group_by':'state'}"/>
+                    <filter string="Company" icon="terp-go-home" domain="[]" context="{'group_by':'company_id'}"/>
+                    </group>
+                </search>
+             </field>
+         </record>
+
+        <record model="ir.actions.act_window" id="action_hr_job">
+            <field name="name">Job Positions</field>
+            <field name="res_model">ph.hr.job</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_job_filter"/>
+            
+            <field name="help">Job Positions are used to define jobs and their requirements. You can keep track of the number of employees you have per job position and how many you expect in the future. You can also attach a survey to a job position that will be used in the recruitment process to evaluate the applicants for this job position.</field>
+        </record>
+        
+        <!-- End of Job Information -->
+        
+        
+        
+        <!-- Company -->
+        
+        <record id="view_hr_company_form" model="ir.ui.view">
+        	<field name="name">ph.hr.company.form</field>
+        	<field name="model">ph.hr.company</field>
+        	<field name="type">form</field>
+        	<field name="arch" type="xml">
+        		<form string="Department">
+        			<field name="name"/>
+        			<field name="address"/>
+        			<field name="tel_no"/>
+        			<field name="fax_no"/>
+        			<field name="zip_code"/>
+        			<field name="email" widget="email"/>
+        			<field name="active"/>
+        			<notebook colspan="4">
+					<page string="Employees">
+                        <field name="employee_ids" colspan="4" nolabel="1" widget="many2many" mode="tree,form"/>
+                    </page>
+				</notebook>
+        		</form>
+        	</field>
+        </record>
+        
+        <record id="view_hr_company_tree" model="ir.ui.view">
+        	<field name="name">ph.hr.company.tree</field>
+        	<field name="model">ph.hr.company</field>
+        	<field name="type">tree</field>
+        	<field name="arch" type="xml">
+        		<tree string="Department">
+        			<field name="name"/>
+        			<field name="tel_no"/>
+        			<field name="zip_code"/>
+        		</tree>
+        	</field>
+        </record>
+        
+        <record id="action_hr_company" model="ir.actions.act_window">
+        	<field name="name">Company</field>
+        	<field name="res_model">ph.hr.company</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">tree,form</field>
+        </record>
+	
+
+	<menuitem name="Employees" id="menu_ph_human_resource" parent="menu_root_payroll_system" action="open_view_employee_list_my" />
+	<menuitem parent="menu_root_payroll_system" id="menu_hr_job" action="action_hr_job" sequence="2"/>
+	<menuitem parent="menu_root_payroll_system" id="menu_hr_company" action="action_hr_company" sequence="4"/>
+
+    <record model="ir.ui.view" id="ph_hr_contract_form_view">
+         <field name="name">ph.hr.contract.form</field>
+         <field name="model">ph.hr.contract</field>
+         <field name="type">form</field>
+         <field name="arch" type="xml">
+             <form string="Contract">
+                 <field name="name" select="1"/>
+                 <field name="duration"/>
+                 <field name="notify_month"/>
+                 <field name="no_work"/>
+                 <field name="no_hour" widget="float_time"/>
+                 <notebook colspan="4">
+					<page string="Employees">
+                        <field name="employee_ids" colspan="4" nolabel="1" widget="many2many" mode="tree,form"/>
+                    </page>
+				</notebook>
+             </form>
+         </field>
+     </record>
+     
+     <record model="ir.ui.view" id="ph_hr_contract_tree_view">
+          <field name="name">ph.hr.contract.tree</field>
+          <field name="model">ph.hr.contract</field>
+          <field name="type">tree</field>
+          <field name="arch" type="xml">
+              <tree string="Contract List">
+                  <field name="name"/>
+                  <field name="duration"/>
+                  <field name="no_work"/>
+                  <field name="no_hour"/>
+              </tree>
+          </field>
+      </record>
+      
+      
+	<record model="ir.actions.act_window" id="action_ph_hr_contract_tree_view">
+	     <field name="name">ph.hr.contract</field>
+	     <field name="res_model">ph.hr.contract</field>
+	<!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+	    <field name="view_type">form</field>
+	    <field name="view_mode">tree,form</field>
+	    <field name="view_id" ref="ph_hr_contract_tree_view"/>
+	</record>
+
+
+		<menuitem id="ph_hr_contract_menu" name="Contracts" parent="menu_root_payroll_system" action="action_ph_hr_contract_tree_view"/>
+		
+	
+	</data>
+</openerp>

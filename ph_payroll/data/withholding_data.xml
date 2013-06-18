@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data  noupdate="1">
+		<record id="daily_withhold_line_row1" model="ph.payroll.withholding.line">
+			<field name="bracket">0.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="daily_withhold_line_row2" model="ph.payroll.withholding.line">
+			<field name="bracket">33.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">1.65</field>
+		</record>
+		<record id="daily_withhold_line_row3" model="ph.payroll.withholding.line">
+			<field name="bracket">99.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">8.25</field>
+		</record>
+		<record id="daily_withhold_line_row4" model="ph.payroll.withholding.line">
+			<field name="bracket">231</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">28.05</field>
+		</record>
+		<record id="daily_withhold_line_row5" model="ph.payroll.withholding.line">
+			<field name="bracket">462.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">74.26</field>
+		</record>
+		<record id="daily_withhold_line_row6" model="ph.payroll.withholding.line">
+			<field name="bracket">825.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">165.02</field>
+		</record>
+		<record id="daily_withhold_line_row7" model="ph.payroll.withholding.line">
+			<field name="bracket">1650.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">412.54</field>
+		</record>
+		<record id="daily_withhold_row1" model="ph.payroll.withholding">
+			<field name="name">Z</field>
+			<field name="deduction_type">daily</field>
+			<field name="exemption">0</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('daily_withhold_line_row1'),ref('daily_withhold_line_row2'),ref('daily_withhold_line_row3'),ref('daily_withhold_line_row4'),ref('daily_withhold_line_row5'),ref('daily_withhold_line_row6'),ref('daily_withhold_line_row7')])]"/>
+		</record>
+		
+		
+		
+		<record id="daily_withhold_line_row8" model="ph.payroll.withholding.line">
+			<field name="bracket">165.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="daily_withhold_line_row9" model="ph.payroll.withholding.line">
+			<field name="bracket">198.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">1.65</field>
+		</record>
+		<record id="daily_withhold_line_row10" model="ph.payroll.withholding.line">
+			<field name="bracket">264.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">8.25</field>
+		</record>
+		<record id="daily_withhold_line_row11" model="ph.payroll.withholding.line">
+			<field name="bracket">396.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">28.05</field>
+		</record>
+		<record id="daily_withhold_line_row12" model="ph.payroll.withholding.line">
+			<field name="bracket">627.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">74.28</field>
+		</record>
+		<record id="daily_withhold_line_row13" model="ph.payroll.withholding.line">
+			<field name="bracket">990.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">165.02</field>
+		</record>
+		<record id="daily_withhold_line_row14" model="ph.payroll.withholding.line">
+			<field name="bracket">1815.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">412.54</field>
+		</record>
+		<record id="daily_withhold_row2" model="ph.payroll.withholding">
+			<field name="name">S/ME</field>
+			<field name="deduction_type">daily</field>
+			<field name="exemption">50</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('daily_withhold_line_row8'),ref('daily_withhold_line_row9'),ref('daily_withhold_line_row10'),ref('daily_withhold_line_row11'),ref('daily_withhold_line_row12'),ref('daily_withhold_line_row13'),ref('daily_withhold_line_row14')])]"/>
+		</record>
+		
+		
+		
+		<record id="daily_withhold_line_row15" model="ph.payroll.withholding.line">
+			<field name="bracket">248.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="daily_withhold_line_row16" model="ph.payroll.withholding.line">
+			<field name="bracket">281.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">1.65</field>
+		</record>
+		<record id="daily_withhold_line_row17" model="ph.payroll.withholding.line">
+			<field name="bracket">347.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">8.25</field>
+		</record>
+		<record id="daily_withhold_line_row18" model="ph.payroll.withholding.line">
+			<field name="bracket">479.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">28.05</field>
+		</record>
+		<record id="daily_withhold_line_row19" model="ph.payroll.withholding.line">
+			<field name="bracket">710.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">74.26</field>
+		</record>
+		<record id="daily_withhold_line_row20" model="ph.payroll.withholding.line">
+			<field name="bracket">1073.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">165.02</field>
+		</record>
+		<record id="daily_withhold_line_row21" model="ph.payroll.withholding.line">
+			<field name="bracket">1898.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">412.54</field>
+		</record>
+		<record id="daily_withhold_row3" model="ph.payroll.withholding">
+			<field name="name">ME1/S1</field>
+			<field name="deduction_type">daily</field>
+			<field name="exemption">75</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('daily_withhold_line_row15'),ref('daily_withhold_line_row16'),ref('daily_withhold_line_row17'),ref('daily_withhold_line_row18'),ref('daily_withhold_line_row19'),ref('daily_withhold_line_row20'),ref('daily_withhold_line_row21')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		<record id="daily_withhold_line_row22" model="ph.payroll.withholding.line">
+			<field name="bracket">330.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="daily_withhold_line_row23" model="ph.payroll.withholding.line">
+			<field name="bracket">363.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">1.65</field>
+		</record>
+		<record id="daily_withhold_line_row24" model="ph.payroll.withholding.line">
+			<field name="bracket">429.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">8.25</field>
+		</record>
+		<record id="daily_withhold_line_row25" model="ph.payroll.withholding.line">
+			<field name="bracket">561.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">28.05</field>
+		</record>
+		<record id="daily_withhold_line_row26" model="ph.payroll.withholding.line">
+			<field name="bracket">792.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">74.26</field>
+		</record>
+		<record id="daily_withhold_line_row27" model="ph.payroll.withholding.line">
+			<field name="bracket">1155.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">165.02</field>
+		</record>
+		<record id="daily_withhold_line_row28" model="ph.payroll.withholding.line">
+			<field name="bracket">1980.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">412.54</field>
+		</record>
+		<record id="daily_withhold_row4" model="ph.payroll.withholding">
+			<field name="name">ME2/S2</field>
+			<field name="deduction_type">daily</field>
+			<field name="exemption">100</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('daily_withhold_line_row22'),ref('daily_withhold_line_row23'),ref('daily_withhold_line_row24'),ref('daily_withhold_line_row25'),ref('daily_withhold_line_row26'),ref('daily_withhold_line_row27'),ref('daily_withhold_line_row28')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		
+		<record id="daily_withhold_line_row29" model="ph.payroll.withholding.line">
+			<field name="bracket">413.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="daily_withhold_line_row30" model="ph.payroll.withholding.line">
+			<field name="bracket">446.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">1.65</field>
+		</record>
+		<record id="daily_withhold_line_row31" model="ph.payroll.withholding.line">
+			<field name="bracket">512.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">8.25</field>
+		</record>
+		<record id="daily_withhold_line_row32" model="ph.payroll.withholding.line">
+			<field name="bracket">644.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">28.05</field>
+		</record>
+		<record id="daily_withhold_line_row33" model="ph.payroll.withholding.line">
+			<field name="bracket">875.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">74.26</field>
+		</record>
+		<record id="daily_withhold_line_row34" model="ph.payroll.withholding.line">
+			<field name="bracket">1238.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">165.02</field>
+		</record>
+		<record id="daily_withhold_line_row35" model="ph.payroll.withholding.line">
+			<field name="bracket">2063.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">412.54</field>
+		</record>
+		<record id="daily_withhold_row5" model="ph.payroll.withholding">
+			<field name="name">ME3/S3</field>
+			<field name="deduction_type">daily</field>
+			<field name="exemption">125</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('daily_withhold_line_row29'),ref('daily_withhold_line_row30'),ref('daily_withhold_line_row31'),ref('daily_withhold_line_row32'),ref('daily_withhold_line_row33'),ref('daily_withhold_line_row34'),ref('daily_withhold_line_row35')])]"/>
+		</record>
+		
+		
+		
+		<record id="daily_withhold_line_row36" model="ph.payroll.withholding.line">
+			<field name="bracket">413.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="daily_withhold_line_row37" model="ph.payroll.withholding.line">
+			<field name="bracket">446.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">1.65</field>
+		</record>
+		<record id="daily_withhold_line_row38" model="ph.payroll.withholding.line">
+			<field name="bracket">512.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">8.25</field>
+		</record>
+		<record id="daily_withhold_line_row39" model="ph.payroll.withholding.line">
+			<field name="bracket">644.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">28.05</field>
+		</record>
+		<record id="daily_withhold_line_row40" model="ph.payroll.withholding.line">
+			<field name="bracket">875.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">74.26</field>
+		</record>
+		<record id="daily_withhold_line_row41" model="ph.payroll.withholding.line">
+			<field name="bracket">1238.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">165.02</field>
+		</record>
+		<record id="daily_withhold_line_row42" model="ph.payroll.withholding.line">
+			<field name="bracket">2063.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">412.54</field>
+		</record>
+		<record id="daily_withhold_row6" model="ph.payroll.withholding">
+			<field name="name">ME4/S4</field>
+			<field name="deduction_type">daily</field>
+			<field name="exemption">150</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('daily_withhold_line_row36'),ref('daily_withhold_line_row37'),ref('daily_withhold_line_row38'),ref('daily_withhold_line_row39'),ref('daily_withhold_line_row40'),ref('daily_withhold_line_row41'),ref('daily_withhold_line_row42')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		
+		<record id="weekly_withhold_line_row1" model="ph.payroll.withholding.line">
+			<field name="bracket">0.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="weekly_withhold_line_row2" model="ph.payroll.withholding.line">
+			<field name="bracket">192.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">9.62</field>
+		</record>
+		<record id="weekly_withhold_line_row3" model="ph.payroll.withholding.line">
+			<field name="bracket">577.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">48.08</field>
+		</record>
+		<record id="weekly_withhold_line_row4" model="ph.payroll.withholding.line">
+			<field name="bracket">1346.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">163.46</field>
+		</record>
+		<record id="weekly_withhold_line_row5" model="ph.payroll.withholding.line">
+			<field name="bracket">2692.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">432.69</field>
+		</record>
+		<record id="weekly_withhold_line_row6" model="ph.payroll.withholding.line">
+			<field name="bracket">4808.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">961.54</field>
+		</record>
+		<record id="weekly_withhold_line_row7" model="ph.payroll.withholding.line">
+			<field name="bracket">9615.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">2403.85</field>
+		</record>
+		<record id="weekly_withhold_row1" model="ph.payroll.withholding">
+			<field name="name">Z</field>
+			<field name="deduction_type">weekly</field>
+			<field name="exemption">0</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('weekly_withhold_line_row1'),ref('weekly_withhold_line_row2'),ref('weekly_withhold_line_row3'),ref('weekly_withhold_line_row4'),ref('weekly_withhold_line_row5'),ref('weekly_withhold_line_row6'),ref('weekly_withhold_line_row7')])]"/>
+		</record>
+		
+		
+		
+		
+		<record id="weekly_withhold_line_row8" model="ph.payroll.withholding.line">
+			<field name="bracket">962.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="weekly_withhold_line_row9" model="ph.payroll.withholding.line">
+			<field name="bracket">1154.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">9.62</field>
+		</record>
+		<record id="weekly_withhold_line_row10" model="ph.payroll.withholding.line">
+			<field name="bracket">1538.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">48.08</field>
+		</record>
+		<record id="weekly_withhold_line_row11" model="ph.payroll.withholding.line">
+			<field name="bracket">2308.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">163.46</field>
+		</record>
+		<record id="weekly_withhold_line_row12" model="ph.payroll.withholding.line">
+			<field name="bracket">3654.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">432.69</field>
+		</record>
+		<record id="weekly_withhold_line_row13" model="ph.payroll.withholding.line">
+			<field name="bracket">5769.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">961.54</field>
+		</record>
+		<record id="weekly_withhold_line_row14" model="ph.payroll.withholding.line">
+			<field name="bracket">10577.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">2403.85</field>
+		</record>
+		<record id="weekly_withhold_row2" model="ph.payroll.withholding">
+			<field name="name">S/ME</field>
+			<field name="deduction_type">weekly</field>
+			<field name="exemption">50</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('weekly_withhold_line_row8'),ref('weekly_withhold_line_row9'),ref('weekly_withhold_line_row10'),ref('weekly_withhold_line_row11'),ref('weekly_withhold_line_row12'),ref('weekly_withhold_line_row13'),ref('weekly_withhold_line_row14')])]"/>
+		</record>
+		
+		
+		
+		<record id="weekly_withhold_line_row15" model="ph.payroll.withholding.line">
+			<field name="bracket">1442.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="weekly_withhold_line_row16" model="ph.payroll.withholding.line">
+			<field name="bracket">1635.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">9.62</field>
+		</record>
+		<record id="weekly_withhold_line_row17" model="ph.payroll.withholding.line">
+			<field name="bracket">2019.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">48.08</field>
+		</record>
+		<record id="weekly_withhold_line_row18" model="ph.payroll.withholding.line">
+			<field name="bracket">2788.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">163.46</field>
+		</record>
+		<record id="weekly_withhold_line_row19" model="ph.payroll.withholding.line">
+			<field name="bracket">4135.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">432.69</field>
+		</record>
+		<record id="weekly_withhold_line_row20" model="ph.payroll.withholding.line">
+			<field name="bracket">6250.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">961.54</field>
+		</record>
+		<record id="weekly_withhold_line_row21" model="ph.payroll.withholding.line">
+			<field name="bracket">11058.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">2403.85</field>
+		</record>
+		<record id="weekly_withhold_row3" model="ph.payroll.withholding">
+			<field name="name">ME1/S1</field>
+			<field name="deduction_type">weekly</field>
+			<field name="exemption">75</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('weekly_withhold_line_row15'),ref('weekly_withhold_line_row16'),ref('weekly_withhold_line_row17'),ref('weekly_withhold_line_row18'),ref('weekly_withhold_line_row19'),ref('weekly_withhold_line_row20'),ref('weekly_withhold_line_row21')])]"/>
+		</record>
+		
+		
+		
+		
+		<record id="weekly_withhold_line_row22" model="ph.payroll.withholding.line">
+			<field name="bracket">1923.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="weekly_withhold_line_row23" model="ph.payroll.withholding.line">
+			<field name="bracket">2115.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">9.62</field>
+		</record>
+		<record id="weekly_withhold_line_row24" model="ph.payroll.withholding.line">
+			<field name="bracket">2500.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">48.08</field>
+		</record>
+		<record id="weekly_withhold_line_row25" model="ph.payroll.withholding.line">
+			<field name="bracket">3269.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">163.46</field>
+		</record>
+		<record id="weekly_withhold_line_row26" model="ph.payroll.withholding.line">
+			<field name="bracket">4615.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">432.69</field>
+		</record>
+		<record id="weekly_withhold_line_row27" model="ph.payroll.withholding.line">
+			<field name="bracket">6731.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">961.54</field>
+		</record>
+		<record id="weekly_withhold_line_row28" model="ph.payroll.withholding.line">
+			<field name="bracket">11538.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">2403.85</field>
+		</record>
+		<record id="weekly_withhold_row4" model="ph.payroll.withholding">
+			<field name="name">ME2/S2</field>
+			<field name="deduction_type">weekly</field>
+			<field name="exemption">100</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('weekly_withhold_line_row22'),ref('weekly_withhold_line_row23'),ref('weekly_withhold_line_row24'),ref('weekly_withhold_line_row25'),ref('weekly_withhold_line_row26'),ref('weekly_withhold_line_row27'),ref('weekly_withhold_line_row28')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		<record id="weekly_withhold_line_row29" model="ph.payroll.withholding.line">
+			<field name="bracket">2404.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="weekly_withhold_line_row30" model="ph.payroll.withholding.line">
+			<field name="bracket">2596.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">9.62</field>
+		</record>
+		<record id="weekly_withhold_line_row31" model="ph.payroll.withholding.line">
+			<field name="bracket">2981.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">48.08</field>
+		</record>
+		<record id="weekly_withhold_line_row32" model="ph.payroll.withholding.line">
+			<field name="bracket">3750.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">163.46</field>
+		</record>
+		<record id="weekly_withhold_line_row33" model="ph.payroll.withholding.line">
+			<field name="bracket">5096.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">432.69</field>
+		</record>
+		<record id="weekly_withhold_line_row34" model="ph.payroll.withholding.line">
+			<field name="bracket">7212.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">961.54</field>
+		</record>
+		<record id="weekly_withhold_line_row35" model="ph.payroll.withholding.line">
+			<field name="bracket">12019.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">2403.85</field>
+		</record>
+		<record id="weekly_withhold_row5" model="ph.payroll.withholding">
+			<field name="name">ME3/S3</field>
+			<field name="deduction_type">weekly</field>
+			<field name="exemption">125</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('weekly_withhold_line_row29'),ref('weekly_withhold_line_row30'),ref('weekly_withhold_line_row31'),ref('weekly_withhold_line_row32'),ref('weekly_withhold_line_row33'),ref('weekly_withhold_line_row34'),ref('weekly_withhold_line_row35')])]"/>
+		</record>
+		
+		
+		
+		<record id="weekly_withhold_line_row36" model="ph.payroll.withholding.line">
+			<field name="bracket">2404.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="weekly_withhold_line_row37" model="ph.payroll.withholding.line">
+			<field name="bracket">2596.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">9.62</field>
+		</record>
+		<record id="weekly_withhold_line_row38" model="ph.payroll.withholding.line">
+			<field name="bracket">2981.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">48.08</field>
+		</record>
+		<record id="weekly_withhold_line_row39" model="ph.payroll.withholding.line">
+			<field name="bracket">3750.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">163.46</field>
+		</record>
+		<record id="weekly_withhold_line_row40" model="ph.payroll.withholding.line">
+			<field name="bracket">5096.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">432.69</field>
+		</record>
+		<record id="weekly_withhold_line_row41" model="ph.payroll.withholding.line">
+			<field name="bracket">7212.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">961.54</field>
+		</record>
+		<record id="weekly_withhold_line_row42" model="ph.payroll.withholding.line">
+			<field name="bracket">12019.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">2403.85</field>
+		</record>
+		<record id="weekly_withhold_row6" model="ph.payroll.withholding">
+			<field name="name">ME4/S4</field>
+			<field name="deduction_type">weekly</field>
+			<field name="exemption">150</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('weekly_withhold_line_row36'),ref('weekly_withhold_line_row37'),ref('weekly_withhold_line_row38'),ref('weekly_withhold_line_row39'),ref('weekly_withhold_line_row40'),ref('weekly_withhold_line_row41'),ref('weekly_withhold_line_row42')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		
+		
+		<record id="semi_withhold_line_row1" model="ph.payroll.withholding.line">
+			<field name="bracket">0.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="semi_withhold_line_row2" model="ph.payroll.withholding.line">
+			<field name="bracket">417.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">20.83</field>
+		</record>
+		<record id="semi_withhold_line_row3" model="ph.payroll.withholding.line">
+			<field name="bracket">1250.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">104.17</field>
+		</record>
+		<record id="semi_withhold_line_row4" model="ph.payroll.withholding.line">
+			<field name="bracket">2917.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">354.17</field>
+		</record>
+		<record id="semi_withhold_line_row5" model="ph.payroll.withholding.line">
+			<field name="bracket">5833.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">937.50</field>
+		</record>
+		<record id="semi_withhold_line_row6" model="ph.payroll.withholding.line">
+			<field name="bracket">10417.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">2083.33</field>
+		</record>
+		<record id="semi_withhold_line_row7" model="ph.payroll.withholding.line">
+			<field name="bracket">20833.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">5208.33</field>
+		</record>
+		<record id="semi_withhold_row1" model="ph.payroll.withholding">
+			<field name="name">Z</field>
+			<field name="deduction_type">semi</field>
+			<field name="exemption">0</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('semi_withhold_line_row1'),ref('semi_withhold_line_row2'),ref('semi_withhold_line_row3'),ref('semi_withhold_line_row4'),ref('semi_withhold_line_row5'),ref('semi_withhold_line_row6'),ref('semi_withhold_line_row7')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		<record id="semi_withhold_line_row8" model="ph.payroll.withholding.line">
+			<field name="bracket">2083.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="semi_withhold_line_row9" model="ph.payroll.withholding.line">
+			<field name="bracket">2500.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">20.83</field>
+		</record>
+		<record id="semi_withhold_line_row10" model="ph.payroll.withholding.line">
+			<field name="bracket">3333.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">104.17</field>
+		</record>
+		<record id="semi_withhold_line_row11" model="ph.payroll.withholding.line">
+			<field name="bracket">5000.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">354.17</field>
+		</record>
+		<record id="semi_withhold_line_row12" model="ph.payroll.withholding.line">
+			<field name="bracket">7917.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">937.50</field>
+		</record>
+		<record id="semi_withhold_line_row13" model="ph.payroll.withholding.line">
+			<field name="bracket">12500</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">2083.33</field>
+		</record>
+		<record id="semi_withhold_line_row14" model="ph.payroll.withholding.line">
+			<field name="bracket">22917.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">5208.33</field>
+		</record>
+		<record id="semi_withhold_row2" model="ph.payroll.withholding">
+			<field name="name">S/ME</field>
+			<field name="deduction_type">semi</field>
+			<field name="exemption">50</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('semi_withhold_line_row8'),ref('semi_withhold_line_row9'),ref('semi_withhold_line_row10'),ref('semi_withhold_line_row11'),ref('semi_withhold_line_row12'),ref('semi_withhold_line_row13'),ref('semi_withhold_line_row14')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		<record id="semi_withhold_line_row15" model="ph.payroll.withholding.line">
+			<field name="bracket">3125.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="semi_withhold_line_row16" model="ph.payroll.withholding.line">
+			<field name="bracket">3542.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">20.83</field>
+		</record>
+		<record id="semi_withhold_line_row17" model="ph.payroll.withholding.line">
+			<field name="bracket">4375.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">104.17</field>
+		</record>
+		<record id="semi_withhold_line_row18" model="ph.payroll.withholding.line">
+			<field name="bracket">6042.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">354.17</field>
+		</record>
+		<record id="semi_withhold_line_row19" model="ph.payroll.withholding.line">
+			<field name="bracket">8958.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">937.50</field>
+		</record>
+		<record id="semi_withhold_line_row20" model="ph.payroll.withholding.line">
+			<field name="bracket">13542.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">2083.33</field>
+		</record>
+		<record id="semi_withhold_line_row21" model="ph.payroll.withholding.line">
+			<field name="bracket">23958.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">5208.33</field>
+		</record>
+		<record id="semi_withhold_row3" model="ph.payroll.withholding">
+			<field name="name">ME1/S1</field>
+			<field name="deduction_type">semi</field>
+			<field name="exemption">75</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('semi_withhold_line_row15'),ref('semi_withhold_line_row16'),ref('semi_withhold_line_row17'),ref('semi_withhold_line_row18'),ref('semi_withhold_line_row19'),ref('semi_withhold_line_row20'),ref('semi_withhold_line_row21')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		<record id="semi_withhold_line_row22" model="ph.payroll.withholding.line">
+			<field name="bracket">4167.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="semi_withhold_line_row23" model="ph.payroll.withholding.line">
+			<field name="bracket">4583.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">20.83</field>
+		</record>
+		<record id="semi_withhold_line_row24" model="ph.payroll.withholding.line">
+			<field name="bracket">5417.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">104.17</field>
+		</record>
+		<record id="semi_withhold_line_row25" model="ph.payroll.withholding.line">
+			<field name="bracket">7083.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">354.17</field>
+		</record>
+		<record id="semi_withhold_line_row26" model="ph.payroll.withholding.line">
+			<field name="bracket">10000.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">937.50</field>
+		</record>
+		<record id="semi_withhold_line_row27" model="ph.payroll.withholding.line">
+			<field name="bracket">14583.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">2083.33</field>
+		</record>
+		<record id="semi_withhold_line_row28" model="ph.payroll.withholding.line">
+			<field name="bracket">25000.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">5208.33</field>
+		</record>
+		<record id="semi_withhold_row4" model="ph.payroll.withholding">
+			<field name="name">ME2/S2</field>
+			<field name="deduction_type">semi</field>
+			<field name="exemption">100</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('semi_withhold_line_row22'),ref('semi_withhold_line_row23'),ref('semi_withhold_line_row24'),ref('semi_withhold_line_row25'),ref('semi_withhold_line_row26'),ref('semi_withhold_line_row27'),ref('semi_withhold_line_row28')])]"/>
+		</record>
+		
+		
+		
+		
+		<record id="semi_withhold_line_row29" model="ph.payroll.withholding.line">
+			<field name="bracket">5208.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="semi_withhold_line_row30" model="ph.payroll.withholding.line">
+			<field name="bracket">5625.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">20.83</field>
+		</record>
+		<record id="semi_withhold_line_row31" model="ph.payroll.withholding.line">
+			<field name="bracket">6458.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">104.17</field>
+		</record>
+		<record id="semi_withhold_line_row32" model="ph.payroll.withholding.line">
+			<field name="bracket">8125.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">354.17</field>
+		</record>
+		<record id="semi_withhold_line_row33" model="ph.payroll.withholding.line">
+			<field name="bracket">11042.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">937.50</field>
+		</record>
+		<record id="semi_withhold_line_row34" model="ph.payroll.withholding.line">
+			<field name="bracket">15625.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">2083.33</field>
+		</record>
+		<record id="semi_withhold_line_row35" model="ph.payroll.withholding.line">
+			<field name="bracket">26042.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">5208.33</field>
+		</record>
+		<record id="semi_withhold_row5" model="ph.payroll.withholding">
+			<field name="name">ME3/S3</field>
+			<field name="deduction_type">semi</field>
+			<field name="exemption">125</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('semi_withhold_line_row29'),ref('semi_withhold_line_row30'),ref('semi_withhold_line_row31'),ref('semi_withhold_line_row32'),ref('semi_withhold_line_row33'),ref('semi_withhold_line_row34'),ref('semi_withhold_line_row35')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		<record id="semi_withhold_line_row36" model="ph.payroll.withholding.line">
+			<field name="bracket">6250.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="semi_withhold_line_row37" model="ph.payroll.withholding.line">
+			<field name="bracket">6667.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">20.83</field>
+		</record>
+		<record id="semi_withhold_line_row38" model="ph.payroll.withholding.line">
+			<field name="bracket">7500.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">104.17</field>
+		</record>
+		<record id="semi_withhold_line_row39" model="ph.payroll.withholding.line">
+			<field name="bracket">9167.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">354.17</field>
+		</record>
+		<record id="semi_withhold_line_row40" model="ph.payroll.withholding.line">
+			<field name="bracket">12083.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">937.50</field>
+		</record>
+		<record id="semi_withhold_line_row41" model="ph.payroll.withholding.line">
+			<field name="bracket">16667.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">2083.33</field>
+		</record>
+		<record id="semi_withhold_line_row42" model="ph.payroll.withholding.line">
+			<field name="bracket">27083.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">5208.33</field>
+		</record>
+		<record id="semi_withhold_row6" model="ph.payroll.withholding">
+			<field name="name">ME4/S4</field>
+			<field name="deduction_type">semi</field>
+			<field name="exemption">150</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('semi_withhold_line_row36'),ref('semi_withhold_line_row37'),ref('semi_withhold_line_row38'),ref('semi_withhold_line_row39'),ref('semi_withhold_line_row40'),ref('semi_withhold_line_row41'),ref('semi_withhold_line_row42')])]"/>
+		</record>
+		
+		
+		
+		
+		
+		
+		<record id="monthly_withhold_line_row1" model="ph.payroll.withholding.line">
+			<field name="bracket">0.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="monthly_withhold_line_row2" model="ph.payroll.withholding.line">
+			<field name="bracket">833.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">41.67</field>
+		</record>
+		<record id="monthly_withhold_line_row3" model="ph.payroll.withholding.line">
+			<field name="bracket">2500.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">208.33</field>
+		</record>
+		<record id="monthly_withhold_line_row4" model="ph.payroll.withholding.line">
+			<field name="bracket">5833.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">708.33</field>
+		</record>
+		<record id="monthly_withhold_line_row5" model="ph.payroll.withholding.line">
+			<field name="bracket">11667.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">1875.00</field>
+		</record>
+		<record id="monthly_withhold_line_row6" model="ph.payroll.withholding.line">
+			<field name="bracket">20883.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">4166.67</field>
+		</record>
+		<record id="monthly_withhold_line_row7" model="ph.payroll.withholding.line">
+			<field name="bracket">41667.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">10416.67</field>
+		</record>
+		<record id="withhold_row1" model="ph.payroll.withholding">
+			<field name="name">Z</field>
+			<field name="deduction_type">monthly</field>
+			<field name="exemption">0</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('monthly_withhold_line_row1'),ref('monthly_withhold_line_row2'),ref('monthly_withhold_line_row3'),ref('monthly_withhold_line_row4'),ref('monthly_withhold_line_row5'),ref('monthly_withhold_line_row6'),ref('monthly_withhold_line_row7')])]"/>
+		</record>
+		
+		
+		
+		<record id="monthly_withhold_line_row8" model="ph.payroll.withholding.line">
+			<field name="bracket">4167.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="monthly_withhold_line_row9" model="ph.payroll.withholding.line">
+			<field name="bracket">5000.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">41.67</field>
+		</record>
+		<record id="monthly_withhold_line_row10" model="ph.payroll.withholding.line">
+			<field name="bracket">6667.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">208.33</field>
+		</record>
+		<record id="monthly_withhold_line_row11" model="ph.payroll.withholding.line">
+			<field name="bracket">10000.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">708.33</field>
+		</record>
+		<record id="monthly_withhold_line_row12" model="ph.payroll.withholding.line">
+			<field name="bracket">15833.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">1875.00</field>
+		</record>
+		<record id="monthly_withhold_line_row13" model="ph.payroll.withholding.line">
+			<field name="bracket">25000.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">4166.67</field>
+		</record>
+		<record id="monthly_withhold_line_row14" model="ph.payroll.withholding.line">
+			<field name="bracket">45833.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">10416.67</field>
+		</record>
+		<record id="withhold_row2" model="ph.payroll.withholding">
+			<field name="name">S/ME</field>
+			<field name="deduction_type">monthly</field>
+			<field name="exemption">50</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('monthly_withhold_line_row8'),ref('monthly_withhold_line_row9'),ref('monthly_withhold_line_row10'),ref('monthly_withhold_line_row11'),ref('monthly_withhold_line_row12'),ref('monthly_withhold_line_row13'),ref('monthly_withhold_line_row14')])]"/>
+		</record>
+		
+		
+		
+		<record id="monthly_withhold_line_row15" model="ph.payroll.withholding.line">
+			<field name="bracket">6250.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="monthly_withhold_line_row16" model="ph.payroll.withholding.line">
+			<field name="bracket">7083.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">41.67</field>
+		</record>
+		<record id="monthly_withhold_line_row17" model="ph.payroll.withholding.line">
+			<field name="bracket">8750.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">208.33</field>
+		</record>
+		<record id="monthly_withhold_line_row18" model="ph.payroll.withholding.line">
+			<field name="bracket">12083.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">708.33</field>
+		</record>
+		<record id="monthly_withhold_line_row19" model="ph.payroll.withholding.line">
+			<field name="bracket">17917.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">1875.00</field>
+		</record>
+		<record id="monthly_withhold_line_row20" model="ph.payroll.withholding.line">
+			<field name="bracket">27083.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">4166.67</field>
+		</record>
+		<record id="monthly_withhold_line_row21" model="ph.payroll.withholding.line">
+			<field name="bracket">47917.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">10416.67</field>
+		</record>
+		<record id="withhold_row3" model="ph.payroll.withholding">
+			<field name="name">ME1/S1</field>
+			<field name="deduction_type">monthly</field>
+			<field name="exemption">75</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('monthly_withhold_line_row15'),ref('monthly_withhold_line_row16'),ref('monthly_withhold_line_row17'),ref('monthly_withhold_line_row18'),ref('monthly_withhold_line_row19'),ref('monthly_withhold_line_row20'),ref('monthly_withhold_line_row21')])]"/>
+		</record>
+		
+		
+		
+		<record id="monthly_withhold_line_row21" model="ph.payroll.withholding.line">
+			<field name="bracket">8333.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="monthly_withhold_line_row22" model="ph.payroll.withholding.line">
+			<field name="bracket">9167.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">41.67</field>
+		</record>
+		<record id="monthly_withhold_line_row23" model="ph.payroll.withholding.line">
+			<field name="bracket">10833.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">208.33</field>
+		</record>
+		<record id="monthly_withhold_line_row24" model="ph.payroll.withholding.line">
+			<field name="bracket">14167.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">708.33</field>
+		</record>
+		<record id="monthly_withhold_line_row25" model="ph.payroll.withholding.line">
+			<field name="bracket">20000.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">1875.00</field>
+		</record>
+		<record id="monthly_withhold_line_row26" model="ph.payroll.withholding.line">
+			<field name="bracket">29167.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">4166.67</field>
+		</record>
+		<record id="monthly_withhold_line_row27" model="ph.payroll.withholding.line">
+			<field name="bracket">50000.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">10416.67</field>
+		</record>
+		<record id="withhold_row4" model="ph.payroll.withholding">
+			<field name="name">ME2/S2</field>
+			<field name="deduction_type">monthly</field>
+			<field name="exemption">100</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('monthly_withhold_line_row21'),ref('monthly_withhold_line_row22'),ref('monthly_withhold_line_row23'),ref('monthly_withhold_line_row24'),ref('monthly_withhold_line_row25'),ref('monthly_withhold_line_row26'),ref('monthly_withhold_line_row27')])]"/>
+		</record>
+		
+		
+		<record id="monthly_withhold_line_row27" model="ph.payroll.withholding.line">
+			<field name="bracket">10417.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="monthly_withhold_line_row28" model="ph.payroll.withholding.line">
+			<field name="bracket">11250.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">41.67</field>
+		</record>
+		<record id="monthly_withhold_line_row29" model="ph.payroll.withholding.line">
+			<field name="bracket">12917.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">208.33</field>
+		</record>
+		<record id="monthly_withhold_line_row30" model="ph.payroll.withholding.line">
+			<field name="bracket">16250.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">708.33</field>
+		</record>
+		<record id="monthly_withhold_line_row31" model="ph.payroll.withholding.line">
+			<field name="bracket">22083.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">1875.00</field>
+		</record>
+		<record id="monthly_withhold_line_row32" model="ph.payroll.withholding.line">
+			<field name="bracket">31250.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">4166.67</field>
+		</record>
+		<record id="monthly_withhold_line_row33" model="ph.payroll.withholding.line">
+			<field name="bracket">52083.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">10416.67</field>
+		</record>
+		<record id="withhold_row5" model="ph.payroll.withholding">
+			<field name="name">ME3/S3</field>
+			<field name="deduction_type">monthly</field>
+			<field name="exemption">125</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('monthly_withhold_line_row27'),ref('monthly_withhold_line_row28'),ref('monthly_withhold_line_row29'),ref('monthly_withhold_line_row30'),ref('monthly_withhold_line_row31'),ref('monthly_withhold_line_row32'),ref('monthly_withhold_line_row33')])]"/>
+		</record>
+		
+		
+		
+		<record id="monthly_withhold_line_row34" model="ph.payroll.withholding.line">
+			<field name="bracket">12500.00</field>
+			<field name="percent_over">5.00</field>
+			<field name="base_tax">0.00</field>
+		</record>
+		<record id="monthly_withhold_line_row35" model="ph.payroll.withholding.line">
+			<field name="bracket">13333.00</field>
+			<field name="percent_over">10.00</field>
+			<field name="base_tax">41.67</field>
+		</record>
+		<record id="monthly_withhold_line_row36" model="ph.payroll.withholding.line">
+			<field name="bracket">15000.00</field>
+			<field name="percent_over">15.00</field>
+			<field name="base_tax">208.33</field>
+		</record>
+		<record id="monthly_withhold_line_row37" model="ph.payroll.withholding.line">
+			<field name="bracket">18333.00</field>
+			<field name="percent_over">20.00</field>
+			<field name="base_tax">708.33</field>
+		</record>
+		<record id="monthly_withhold_line_row38" model="ph.payroll.withholding.line">
+			<field name="bracket">24167.00</field>
+			<field name="percent_over">25.00</field>
+			<field name="base_tax">1875.00</field>
+		</record>
+		<record id="monthly_withhold_line_row39" model="ph.payroll.withholding.line">
+			<field name="bracket">33333.00</field>
+			<field name="percent_over">30.00</field>
+			<field name="base_tax">4166.67</field>
+		</record>
+		<record id="monthly_withhold_line_row40" model="ph.payroll.withholding.line">
+			<field name="bracket">54167.00</field>
+			<field name="percent_over">32.00</field>
+			<field name="base_tax">10416.67</field>
+		</record>
+		<record id="withhold_row6" model="ph.payroll.withholding">
+			<field name="name">ME4/S4</field>
+			<field name="deduction_type">monthly</field>
+			<field name="exemption">150</field>
+			<field name="count">1</field>
+			<field name="withholding_line_ids" eval="[(6, 0, [ref('monthly_withhold_line_row34'),ref('monthly_withhold_line_row35'),ref('monthly_withhold_line_row36'),ref('monthly_withhold_line_row37'),ref('monthly_withhold_line_row38'),ref('monthly_withhold_line_row39'),ref('monthly_withhold_line_row40')])]"/>
+		</record>
+		
+		<record id="payroll_constant" model="ph.payroll.constant">
+			<field name="ot_percent">25</field>
+			<field name="nd_percent">10</field>
+			<field name="legal_percent">100</field>
+			<field name="special_percent">30</field>
+			<field name="rest_legal_percent">160</field>
+			<field name="rest_special_percent">50</field>
+			<field name="rest_percent">30</field>
+			<field name="rest_nd_percent">43</field>
+			<field name="special_nd_percent">43</field>
+			<field name="special_rest_nd_percent">65</field>
+			<field name="legal_nd_percent">120</field>
+			<field name="legal_rest_nd_percent">186</field>
+			<field name="rest_ot_percent">169</field>
+			<field name="special_ot_percent">169</field>
+			<field name="special_rest_ot_percent">95</field>
+			<field name="legal_ot_percent">160</field>
+			<field name="legal_rest_ot_percent">238</field>
+			<field name="nd_ot">37.5</field>
+			<field name="rest_nd_ot">85.9</field>
+			<field name="special_nd_ot">85.9</field>
+			<field name="special_rest_nd_ot">114.5</field>
+			<field name="legal_nd_ot">186</field>
+			<field name="legal_rest_nd_ot">271.8</field>
+			
+		</record>
+	</data>
+</openerp>
